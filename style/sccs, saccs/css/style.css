@@ -84,7 +84,17 @@ body {
   border-radius: 16px;
 }
 
-.gold-mini {
-  width: 70%;
+.yachts {
+  width: 100%;
   height: 700px;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  top: 1300px;
+}
+
+.yachts .gold-mini {
+  height: 700px;
+  width: 663px;
+  position: relative;
 }
