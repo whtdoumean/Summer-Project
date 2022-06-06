@@ -74,8 +74,11 @@ body {
 }
 
 .title-1 .separator {
+  position: relative;
   align-items: center;
   width: 144px;
-  height: 2px;
+  height: 3px;
   background-color: #fff;
+  opacity: 50%;
+  top: 16px;
 }
