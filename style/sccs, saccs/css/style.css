@@ -191,4 +191,5 @@ body {
 .ruble {
   width: 28px;
   height: 28px;
+  position: relative;
 }
