@@ -28,7 +28,7 @@ body {
 
 .main-pic {
     position: absolute;
-    top: -136px;
+    top: -20%;
     width: 100%;
 }
 
@@ -75,9 +75,10 @@ body {
 }
 
 .block-1 {
+    width: 100%;
     position: relative;
     margin: 0 auto;
-    top: 880px;
+    top: 300px;
 }
 
 .title-1 {   
@@ -111,10 +112,26 @@ body {
     justify-content: space-between;
     top: 110px;
     .gold-mini {
-        height: 700px;
-        width: 663px;
-        position: relative;
-        
-        
+        height: 600px;
+        width: 563px;
+        position: relative;    
+        margin-left: 7%; 
+        .text-yachts1 {
+            font-size: 30px;
+            background-color: #fff;
+            height: 203px;
+            width: 100%;
+            border: thick white;
+            border-radius: 1px;
+        }
     }
-}
+    .evrika {
+        height: 600px;
+        width: 563px;
+        position: relative;
+        margin-right: 7%; 
+        .text-yachts2 {
+            font-size: 30px;
+        }
+    }
+}   
