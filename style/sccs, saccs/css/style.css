@@ -154,6 +154,12 @@ body {
   border: 0px;
 }
 
+.yachts img {
+  width: 100%;
+  position: relative;
+  border-radius: 35px 35px 0px 0px;
+}
+
 .yachts .gold-mini {
   border-radius: 35px;
   background-color: #fff;
