@@ -104,36 +104,86 @@ body {
 
 .yachts {
   width: 100%;
-  height: 700px;
+  height: 592px;
   display: flex;
   position: relative;
   justify-content: space-between;
   top: 110px;
-  background-color: #fff;
 }
 
 .yachts .gold-mini {
-  height: 600px;
-  width: 563px;
+  border-radius: 35px;
+  background-color: #fff;
+  height: 592px;
+  width: 546px;
   position: relative;
   margin-left: 7%;
 }
 
-.yachts .gold-mini .text-yachts1 {
+.yachts .gold-mini .text-gold1 {
   font-size: 30px;
-  height: 203px;
-  width: 100%;
-  border-radius: 35px;
+  text-align: center;
+  position: relative;
+  top: 1%;
+}
+
+.yachts .gold-mini .text-gold2 {
+  font-size: 24px;
+  position: relative;
+  text-align: center;
+  top: 0.5%;
+}
+
+.yachts .gold-mini .gold-but {
+  position: relative;
+  background-color: #F13C20;
+  width: 498px;
+  height: 56px;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 40px;
+  border: 0px;
+  margin-left: 24px;
+  margin-top: 28px;
 }
 
 .yachts .evrika {
-  height: 600px;
-  width: 563px;
+  border-radius: 35px;
+  background-color: #fff;
+  height: 592px;
+  width: 546px;
   position: relative;
   margin-right: 7%;
 }
 
 .yachts .evrika .text-yachts2 {
   font-size: 30px;
-  border-radius: 35px;
+  position: relative;
+}
+
+.yachts .evrika .text-evr1 {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  top: 1%;
+}
+
+.yachts .evrika .text-evr2 {
+  font-size: 24px;
+  position: relative;
+  text-align: center;
+  top: 0.5%;
+}
+
+.yachts .evrika .evr-but {
+  position: relative;
+  background-color: #F13C20;
+  width: 498px;
+  height: 56px;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 40px;
+  border: 0px;
+  margin-left: 24px;
+  margin-top: 28px;
 }
