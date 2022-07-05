@@ -6,7 +6,7 @@ body {
 }
 
 .head {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 50px;
     background-color: $ocean-blue;
@@ -33,7 +33,7 @@ body {
 }
 
 .slogan {
-    position: absolute;
+    position: relative;
     flex-direction: column;
     width: 100%;
     height: 130px;
