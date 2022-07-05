@@ -39,7 +39,7 @@ body {
   position: relative;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 50px - 120px);
+  height: calc(90vh - 50px);
   color: white;
   display: flex;
   margin: 0 auto;
@@ -109,6 +109,7 @@ body {
   position: relative;
   justify-content: space-between;
   top: 110px;
+  background-color: #fff;
 }
 
 .yachts .gold-mini {
@@ -120,11 +121,9 @@ body {
 
 .yachts .gold-mini .text-yachts1 {
   font-size: 30px;
-  background-color: #fff;
   height: 203px;
   width: 100%;
-  border: thick white;
-  border-radius: 1px;
+  border-radius: 35px;
 }
 
 .yachts .evrika {
@@ -136,4 +135,5 @@ body {
 
 .yachts .evrika .text-yachts2 {
   font-size: 30px;
+  border-radius: 35px;
 }

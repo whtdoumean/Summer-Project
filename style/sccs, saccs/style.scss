@@ -41,7 +41,7 @@ body {
     position: relative;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 50px - 120px);
+    height: calc(90vh - 50px);
     color: white;
     display: flex;
     margin: 0 auto;
@@ -110,6 +110,7 @@ body {
     position: relative;
     justify-content: space-between;
     top: 110px;
+    background-color: #fff;
     .gold-mini {
         height: 600px;
         width: 563px;
@@ -117,11 +118,9 @@ body {
         margin-left: 7%; 
         .text-yachts1 {
             font-size: 30px;
-            background-color: #fff;
             height: 203px;
             width: 100%;
-            border: thick white;
-            border-radius: 1px;
+            border-radius: 35px;
         }
     }
     .evrika {
@@ -131,6 +130,7 @@ body {
         margin-right: 7%; 
         .text-yachts2 {
             font-size: 30px;
+            border-radius: 35px;
         }
     }
 }   
