@@ -2,7 +2,7 @@ $ocean-blue: #032270;
 
 
 body {
-    background-color: $ocean-blue;
+    background-color: #0B6683;
 }
 
 .header {
@@ -110,7 +110,6 @@ body {
 
 .yachts {
     width: 100%;
-    height: 592px;
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -120,6 +119,7 @@ body {
         font-size: 30px;
         text-align: center; 
         position: relative;
+        margin-top: 12px;
     }
 
     .cost {
@@ -133,6 +133,7 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding: 17.5px 0px 17.5px 0px;
     }
 
     .ruble {
@@ -171,7 +172,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 592px;
+        height: fit-content;
         position: relative;
     }
     .evrika {
@@ -181,12 +182,12 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 592px;
+        height: fit-content;
         position: relative;
     }
 } 
 
-@media (min-width: 0px) and (max-width: 1199.98px) {
+@media (min-width: 0px) and (max-width: 767.98px) {
     .yachts {
         flex-direction: column;
 
