@@ -30,6 +30,7 @@ body {
 }
 
 .main {
+  width: 1200px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -111,11 +112,46 @@ body {
   top: 110px;
 }
 
+.yachts .name {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+}
+
 .yachts .cost {
+  font-size: 24px;
+  position: relative;
+  text-align: center;
+}
+
+.yachts .cost-cont {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.yachts .ruble {
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+
+.yachts .inf-but-cont {
+  width: 100%;
+  display: inline-block;
+  padding: 0px 12px 12px 12px;
+}
+
+.yachts .inf-but {
+  position: relative;
+  background-color: #F13C20;
+  width: 100%;
+  height: 56px;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 40px;
+  border: 0px;
 }
 
 .yachts .gold-mini {
@@ -124,34 +160,6 @@ body {
   height: 592px;
   width: 546px;
   position: relative;
-  margin-left: 7%;
-}
-
-.yachts .gold-mini .text-gold1 {
-  font-size: 30px;
-  text-align: center;
-  position: relative;
-  top: 1%;
-}
-
-.yachts .gold-mini .text-gold2 {
-  font-size: 24px;
-  position: relative;
-  text-align: center;
-  top: 0.5%;
-}
-
-.yachts .gold-mini .gold-but {
-  position: relative;
-  background-color: #F13C20;
-  width: 498px;
-  height: 56px;
-  color: #fff;
-  font-size: 28px;
-  border-radius: 40px;
-  border: 0px;
-  margin-left: 24px;
-  margin-top: 28px;
 }
 
 .yachts .evrika {
@@ -159,44 +167,5 @@ body {
   background-color: #fff;
   height: 592px;
   width: 546px;
-  position: relative;
-  margin-right: 7%;
-}
-
-.yachts .evrika .text-yachts2 {
-  font-size: 30px;
-  position: relative;
-}
-
-.yachts .evrika .text-evr1 {
-  font-size: 30px;
-  text-align: center;
-  position: relative;
-  top: 1%;
-}
-
-.yachts .evrika .text-evr2 {
-  font-size: 24px;
-  position: relative;
-  text-align: center;
-  top: 0.5%;
-}
-
-.yachts .evrika .evr-but {
-  position: relative;
-  background-color: #F13C20;
-  width: 498px;
-  height: 56px;
-  color: #fff;
-  font-size: 28px;
-  border-radius: 40px;
-  border: 0px;
-  margin-left: 24px;
-  margin-top: 28px;
-}
-
-.ruble {
-  width: 28px;
-  height: 28px;
   position: relative;
 }
