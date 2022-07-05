@@ -2,8 +2,8 @@ body {
   background-color: #032270;
 }
 
-.head {
-  position: relative;
+.header {
+  position: sticky;
   width: 100%;
   height: 50px;
   background-color: #032270;
@@ -31,16 +31,22 @@ body {
 
 .main {
   width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 0px) and (max-width: 1199.98px) {
+  .main {
+    width: 90%;
+  }
 }
 
 .slogan {
   position: relative;
   flex-direction: column;
   width: 100%;
-  height: calc(90vh - 50px);
+  height: 50vmax;
   color: white;
   display: flex;
   margin: 0 auto;
@@ -57,7 +63,7 @@ body {
 
 .slogan .slogan-in h2 {
   font-size: 40px;
-  align-items: center;
+  text-align: center;
 }
 
 .slogan .slogan-in .main-but {
@@ -163,15 +169,33 @@ body {
 .yachts .gold-mini {
   border-radius: 35px;
   background-color: #fff;
+  width: 45.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 592px;
-  width: 546px;
   position: relative;
 }
 
 .yachts .evrika {
   border-radius: 35px;
   background-color: #fff;
+  width: 45.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 592px;
-  width: 546px;
   position: relative;
+}
+
+@media (min-width: 0px) and (max-width: 1199.98px) {
+  .yachts {
+    flex-direction: column;
+  }
+  .gold-mini {
+    width: 100%;
+  }
+  .evrika {
+    width: 100%;
+  }
 }
