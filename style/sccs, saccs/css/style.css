@@ -59,14 +59,19 @@ body {
   border: 0px;
 }
 
-.title-1 {
+.block-1 {
+  position: relative;
   margin: 0 auto;
+  top: 880px;
+}
+
+.title-1 {
   font-size: 40px;
   position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
-  top: 950px;
+  top: 40px;
   align-items: center;
   width: 100%;
   height: 67.86px;
@@ -88,9 +93,9 @@ body {
   width: 100%;
   height: 700px;
   display: flex;
-  position: absolute;
+  position: relative;
   justify-content: space-between;
-  top: 1300px;
+  top: 110px;
 }
 
 .yachts .gold-mini {
