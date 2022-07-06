@@ -22,7 +22,9 @@ body {
 
 .head-nav a {
   font-size: 20px;
-  line-height: 6vmax;
+  line-height: 5vmax;
+  text-decoration: none;
+  color: #fff;
 }
 
 .head-nav .icon {
@@ -51,14 +53,12 @@ body {
     flex-direction: column;
   }
   .head-nav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+    text-align: right;
   }
   .head-nav.responsive a {
-    float: none;
     display: block;
-    text-align: left;
+    width: 100%;
+    text-align: center;
   }
 }
 
