@@ -18,46 +18,94 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s;
 }
 
 .head-nav a {
+  height: 6vmax;
+  line-height: 6vmax;
   font-size: 20px;
-  line-height: 5vmax;
   text-decoration: none;
   color: #fff;
 }
 
-.head-nav .icon {
+.head-nav .menu-close-cont {
   display: none;
-  color: #fff;
+  width: 100%;
+  height: 6vmax;
+  transition: 0.2s;
 }
 
-@media screen and (max-width: 600px) {
+.head-nav .menu-close-cont img {
+  width: calc(5vmax - 8px);
+  margin: 0 auto;
+}
+
+.head-nav .menu-close-cont .icon-menu {
+  display: none;
+}
+
+.head-nav .menu-close-cont .icon-close {
+  display: none;
+}
+
+@media (min-width: 600px) and (max-width: 1249.98px) {
+  .head-nav {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 599.98px) {
   .head-nav a {
     display: none;
+    height: 0px;
   }
-  .head-nav {
+  .head-nav .menu-close-cont {
+    display: flex;
+    flex-direction: row;
     justify-content: flex-end;
   }
-  .head-nav .icon {
-    display: block;
+  .head-nav .menu-close-cont img {
+    margin: auto;
+  }
+  .head-nav .menu-close-cont .icon-menu {
+    width: fit-content;
+    height: 6vmax;
+    display: flex;
+    margin-right: 5%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .header.responsive {
-    height: 500px;
-  }
   .head-nav.responsive {
     position: relative;
     flex-direction: column;
+    width: 100%;
   }
-  .head-nav.responsive .icon {
-    text-align: right;
+  .head-nav.responsive .menu-close-cont {
+    width: 100%;
+    height: 6vmax;
+    border-bottom: solid rgba(255, 255, 255, 0.5) 1px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .head-nav.responsive .menu-close-cont img {
+    margin: auto;
+  }
+  .head-nav.responsive .menu-close-cont .icon-menu {
+    display: none;
+  }
+  .head-nav.responsive .menu-close-cont .icon-close {
+    display: flex;
+    width: fit-content;
+    height: 6vmax;
+    margin-left: 5%;
   }
   .head-nav.responsive a {
-    display: block;
     width: 100%;
+    height: 6vmax;
+    line-height: 6vmax;
+    display: block;
     text-align: center;
   }
 }
@@ -74,11 +122,8 @@ body {
   flex-direction: column;
 }
 
-@media (min-width: 0px) and (max-width: 1199.98px) {
+@media screen and (max-width: 1249.98px) {
   .main {
-    width: 90%;
-  }
-  .head-nav {
     width: 90%;
   }
 }
