@@ -1,5 +1,5 @@
 body {
-  background-color: #0B6683;
+  background-color: #0b627d;
 }
 
 .header {
@@ -276,6 +276,7 @@ body {
 
 .comments {
   width: 100%;
+  height: max-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -286,10 +287,12 @@ body {
   width: 30%;
   background-color: #fff;
   color: #000;
-  height: fit-content;
   box-sizing: border-box;
   padding: 28px 28px;
   border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-size: 1.5em;
 }
 
