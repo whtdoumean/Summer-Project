@@ -202,7 +202,7 @@ body {
 }
 
 .yachts .yacht-card {
-  border-radius: 35px;
+  border-radius: 32px;
   background-color: #fff;
   width: 45.5%;
   display: flex;
@@ -289,7 +289,7 @@ body {
   color: #000;
   box-sizing: border-box;
   padding: 28px 28px;
-  border-radius: 35px;
+  border-radius: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -314,5 +314,79 @@ body {
   }
   .comments .comments-card:not(:first-child) {
     margin-top: 24px;
+  }
+}
+
+.contacts {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 32px;
+  margin-top: 42px;
+}
+
+.contacts .data {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.contacts .data .data-corr:not(:last-child) {
+  margin-bottom: 54px;
+}
+
+.contacts .data .mini-title {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.contacts .data .mini-title p {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 16px;
+}
+
+.contacts .map {
+  width: 70%;
+  border-radius: 18px;
+}
+
+.contacts .map iframe {
+  border-radius: 18px;
+}
+
+@media screen and (max-width: 1249.98px) {
+  .contacts .data {
+    width: 60%;
+  }
+  .contacts .map {
+    width: 38%;
+  }
+}
+
+@media screen and (max-width: 599.98px) {
+  .contacts {
+    flex-direction: column;
+  }
+  .contacts .data {
+    width: 100%;
+    order: 1;
+  }
+  .contacts .map {
+    width: 100%;
+    height: 344px;
+    order: 0;
+    margin-bottom: 16px;
   }
 }
