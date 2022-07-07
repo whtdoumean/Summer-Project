@@ -12,7 +12,7 @@ body {
     height: fit-content;
     background-color: $ocean-blue;
     color: white;
-    z-index: 1;
+    z-index: 2;
 }
 
 .head-nav {
@@ -121,6 +121,7 @@ body {
 
 
 .main-pic {
+    z-index: -1001;
     position: absolute;
     width: 100%;
 }
@@ -400,5 +401,35 @@ body {
             order: 0;
             margin-bottom: 16px;
         }
+    }
+}
+
+footer {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 28px 28px 56px 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 10vw;
+
+    background-color: $ocean-blue;
+    color: #fff;
+
+    z-index: 1;
+
+    .footer-title {
+        font-size: 1.5rem;
+    }
+
+    .footer-data {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        font-size: 1.5rem;
     }
 }
