@@ -8,7 +8,7 @@ $bold-font: "wdth" 151, "wght" 800, "GRAD" 0, "XTRA" 480, "YOPQ" 25, "YTDE" -305
 
 
 body {
-    background-color: #0b627d;
+    background-color: $ocean-blue;
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto Flex', sans-serif;
@@ -155,6 +155,8 @@ body {
     margin-top: $header-height;
     display: flex;
     flex-direction: column;
+
+    background-color: #0b627d;
 }
 @media screen and (max-width: 1249.98px) {
     .main {

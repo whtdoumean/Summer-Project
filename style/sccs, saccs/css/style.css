@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,GRAD,XTRA,YOPQ,YTDE,YTUC@8..144,120,400,100,468,90,-203,712;8..144,120,500,100,468,90,-203,712;8..144,151,800,0,480,25,-305,760&display=swap");
 body {
-  background-color: #0b627d;
+  background-color: #032270;
   margin: 0px;
   padding: 0px;
   font-family: 'Roboto Flex', sans-serif;
@@ -140,6 +140,7 @@ body {
   margin-top: 80px;
   display: flex;
   flex-direction: column;
+  background-color: #0b627d;
 }
 
 @media screen and (max-width: 1249.98px) {
