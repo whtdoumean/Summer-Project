@@ -1,5 +1,6 @@
 $ocean-blue: #032270;
 $header-height: 80px;
+$mobile-header-height: 60px;
 $text-font: "wdth" 120, "wght" 400, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
 $medium-font: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
 $bold-font: "wdth" 151, "wght" 800, "GRAD" 0, "XTRA" 480, "YOPQ" 25, "YTDE" -305, "YTUC" 760;
@@ -15,6 +16,12 @@ body {
     font-variation-settings: $text-font;
 }
 
+@media screen and (max-width: 599.98px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 .header {
     position: fixed;
 	top: 0; left: 0;
@@ -28,7 +35,7 @@ body {
 }
 
 .header.hide {
-	transform: translateY(-$header-height);
+	transform: translateY(-100%);
 }
 
 
@@ -52,7 +59,7 @@ body {
         display: none;
         width: 100%;
         height: $header-height;
-        transition: 0.2s;
+        transition: .3s;
 
         img {
             width: 44px;
@@ -86,6 +93,7 @@ body {
             display: none;
             height: 0px;
         }
+
         .menu-close-cont {
             display: flex;
             flex-direction: row;
