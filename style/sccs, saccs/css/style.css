@@ -384,6 +384,7 @@ body {
   width: 28%;
   font-size: 1.5rem;
   text-align: center;
+  text-decoration: none;
 }
 
 .contacts .data .data-corr:not(:last-child) {
@@ -403,6 +404,7 @@ body {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 16px;
+  text-decoration: none;
 }
 
 .contacts .map {
@@ -469,21 +471,25 @@ footer .footer-content .footer-data {
   flex-direction: row;
   justify-content: space-between;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
 footer .footer-content .footer-data p {
   width: 100%;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1249.98px) {
   footer .footer-content {
     width: 90%;
+    text-decoration: none;
   }
   footer .footer-content .footer-data {
     flex-direction: column;
   }
   footer .footer-content .footer-data p {
     text-align: right;
+    text-decoration: none;
   }
 }
 
@@ -491,10 +497,12 @@ footer .footer-content .footer-data p {
   footer .footer-content .footer-title {
     font-size: 1rem;
     width: 50%;
+    text-decoration: none;
   }
   footer .footer-content .footer-data {
     width: fit-content;
     justify-content: center;
+    text-decoration: none;
   }
   footer .footer-content .footer-data .footer-dis {
     display: none;
@@ -503,5 +511,6 @@ footer .footer-content .footer-data p {
     font-size: 1rem;
     width: fit-content;
     white-space: nowrap;
+    text-decoration: none;
   }
 }
