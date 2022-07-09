@@ -140,6 +140,12 @@ body {
   }
 }
 
+.wrapper {
+    width: 100%;
+    background-color: #0b627d;
+    box-sizing: border-box;
+    padding-bottom: 10vw;
+}
 
 .main-pic {
     z-index: -1001;
@@ -453,8 +459,6 @@ footer {
     height: fit-content;
     box-sizing: border-box;
     padding: 28px 0px 56px 0px;
-
-    margin-top: 10vw;
 
     background-color: $ocean-blue;
     color: #fff;
