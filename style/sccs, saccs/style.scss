@@ -141,9 +141,18 @@ body {
   }
 }
 
+.fake-header {
+    width: 100%;
+    height: $header-height;
+    background-color: $ocean-blue;
+}
+
 .wrapper {
     width: 100%;
     background-color: #0b627d;
+    background-image: url("/Projects/Summer-Project/pictures/background_pic.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
     box-sizing: border-box;
     padding-bottom: 10vw;
 }
@@ -159,11 +168,8 @@ body {
 .main {
     width: 1200px;
     margin: 0 auto;
-    margin-top: $header-height;
     display: flex;
     flex-direction: column;
-
-    background-color: #0b627d;
 }
 @media screen and (max-width: 1249.98px) {
     .main {
