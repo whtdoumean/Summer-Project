@@ -1,19 +1,36 @@
 $ocean-blue: #032270;
-$header-height: 6vmax;
+$header-height: 80px;
+$text-font: "wdth" 120, "wght" 400, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
+$medium-font: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
+$bold-font: "wdth" 151, "wght" 800, "GRAD" 0, "XTRA" 480, "YOPQ" 25, "YTDE" -305, "YTUC" 760;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,GRAD,XTRA,YOPQ,YTDE,YTUC@8..144,120,400,100,468,90,-203,712;8..144,120,500,100,468,90,-203,712;8..144,151,800,0,480,25,-305,760&display=swap');
 
 
 body {
     background-color: #0b627d;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: $text-font;
 }
 
 .header {
-    position: sticky;
+    position: fixed;
+	top: 0; left: 0;
     width: 100%;
     height: fit-content;
     background-color: $ocean-blue;
     color: white;
     z-index: 2;
+
+    transition: transform .3s ease;
 }
+
+.header.hide {
+	transform: translateY(-$header-height);
+}
+
 
 .head-nav {
     max-width: 1200px;
@@ -26,7 +43,7 @@ body {
     a {
         height: $header-height;
         line-height: $header-height;
-        font-size: 20px;
+        font-size: 1.5rem;
         text-decoration: none;
         color: #fff;       
     }
@@ -123,6 +140,8 @@ body {
 .main-pic {
     z-index: -1001;
     position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
 }
 
@@ -156,8 +175,10 @@ body {
         align-items: center;
 
         h2 {
-            font-size: 40px;
+            font-size: 2.5rem;
             text-align: center;
+            font-weight: 800;
+            font-variation-settings: $bold-font;
         }
         .main-but {    
             background-color: #F13C20;
@@ -165,10 +186,14 @@ body {
             height: 56px;
             position: relative;
             color: #fff;
-            font-size: 28px;
+            font-size: 1.75rem;
             border-radius: 40px;
             border: 0px;
             margin-top: 32px;
+            p {
+                font-family: 'Roboto Flex', sans-serif;
+                font-variation-settings: $medium-font;
+            }
         }
     }
     
@@ -182,7 +207,8 @@ body {
 }
 
 .title {   
-    font-size: 40px;
+    font-size: 2.25rem;
+    font-variation-settings: $bold-font;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -222,13 +248,14 @@ body {
         img {
             width: 100%;
             position: relative;
-            border-radius: 35px 35px 0px 0px;
+            border-radius: 32px 32px 0px 0px;
         }
         .name {
-            font-size: 30px;
+            font-size: 2rem;
             text-align: center; 
             position: relative;
             margin-top: 12px;
+            font-variation-settings: $bold-font;
         }
         .cost-cont {
             width: 100%;
@@ -244,7 +271,7 @@ body {
                 
             }
             .cost {
-                font-size: 24px;
+                font-size: 1.5rem;
                 position: relative;
                 text-align: center;
             }
@@ -260,9 +287,13 @@ body {
                 width: 100%;
                 height: 56px;
                 color: #fff;
-                font-size: 28px;
+                font-size: 1.5rem;
                 border-radius: 40px;
                 border: 0px;
+                p {
+                    font-family: 'Roboto Flex', sans-serif;
+                    font-variation-settings: $medium-font;
+                }
             }
         }    
     }
@@ -301,11 +332,11 @@ body {
         flex-direction: column;
         justify-content: space-between;
 
-        font-size: 1.5em;
+        font-size: 1.5rem;
 
         .comments-name {
             margin-top: 10px;
-            font-weight: bold;
+            font-variation-settings: $medium-font;
 
             p {
                 text-align: center;
@@ -344,7 +375,7 @@ body {
         flex-direction: column;
         width: 28%;
 
-        font-size: 1.5em;
+        font-size: 1.5rem;
         text-align: center;
 
         .data-corr:not(:last-child) {
@@ -388,7 +419,7 @@ body {
     }
 }
 
-@media screen and (max-width: 599.98px) {
+@media screen and (max-width: 629.98px) {
     .contacts {
         flex-direction: column;
         .data {
@@ -408,10 +439,7 @@ footer {
     width: 100%;
     height: fit-content;
     box-sizing: border-box;
-    padding: 28px 28px 56px 28px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 28px 0px 56px 0px;
 
     margin-top: 10vw;
 
@@ -420,16 +448,71 @@ footer {
 
     z-index: 1;
 
-    .footer-title {
-        font-size: 1.5rem;
-    }
-
-    .footer-data {
-        width: 100%;
+    .footer-content {
+        width: 1200px;
+        margin: auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
 
-        font-size: 1.5rem;
+        .footer-title {
+            font-size: 1.5rem;
+            font-variation-settings: $bold-font;
+            text-align: center;
+        }
+    
+        .footer-data {
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+            font-size: 1.5rem;
+    
+            p {
+                width: 100%;
+            }
+        }
     }
 }
+
+@media screen and (max-width: 1249.98px) {
+    footer {
+        .footer-content {
+            width: 90%;
+
+            .footer-data {
+                flex-direction: column;
+                p {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 629.98px) {
+    footer {
+        .footer-content {
+            .footer-title {
+                font-size: 1rem;
+                width: 50%;
+            }
+            .footer-data {
+                width: fit-content;
+                justify-content: center;
+
+                .footer-dis {
+                    display: none;
+                }
+
+                p {
+                    font-size: 1rem;
+                    width: fit-content;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
