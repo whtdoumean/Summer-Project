@@ -114,7 +114,7 @@ body {
 
 @media screen and (max-width: 699.98px) {
     .header {
-        height: fit-content;
+        height: $header-height;
     }
     .head-nav {
         a {
@@ -141,6 +141,8 @@ body {
         position: relative;
         flex-direction: column;
         width: 100%;
+        height: fit-content;
+        background-color: $ocean-blue;
 
         .menu-close-cont {
             width: 100%;

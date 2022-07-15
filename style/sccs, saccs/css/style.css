@@ -80,7 +80,7 @@ body {
 
 @media screen and (max-width: 699.98px) {
   .header {
-    height: fit-content;
+    height: 80px;
   }
   .head-nav a {
     display: none;
@@ -100,6 +100,8 @@ body {
     position: relative;
     flex-direction: column;
     width: 100%;
+    height: fit-content;
+    background-color: #032270;
   }
   .head-nav.responsive .menu-close-cont {
     width: 100%;
