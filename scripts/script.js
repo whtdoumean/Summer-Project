@@ -8,7 +8,7 @@ function myFunction() {
 }
 
 let lastScroll = 0;
-const defoultOffset = 300;
+const defoultOffset = 500;
 const header = document.querySelector('.header');
 
 const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
