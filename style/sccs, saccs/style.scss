@@ -113,10 +113,12 @@ body {
 }
 
 @media screen and (max-width: 699.98px) {
+    .header {
+        height: fit-content;
+    }
     .head-nav {
         a {
             display: none;
-            height: 0px;
         }
 
         .menu-close-cont {
@@ -124,10 +126,6 @@ body {
             flex-direction: row;
             justify-content: flex-end;
             
-            img {
-                margin: auto;
-            }
-
             .icon-menu {
                 display: flex;
                 flex-direction: column;
@@ -136,9 +134,8 @@ body {
             }
         }
     }
-}
 
-@media screen and (max-width: 699.98px) {
+
     .head-nav.responsive {
 
         position: relative;

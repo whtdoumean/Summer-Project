@@ -79,17 +79,16 @@ body {
 }
 
 @media screen and (max-width: 699.98px) {
+  .header {
+    height: fit-content;
+  }
   .head-nav a {
     display: none;
-    height: 0px;
   }
   .head-nav .menu-close-cont {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-  }
-  .head-nav .menu-close-cont img {
-    margin: auto;
   }
   .head-nav .menu-close-cont .icon-menu {
     display: flex;
@@ -97,9 +96,6 @@ body {
     justify-content: center;
     margin-right: 5%;
   }
-}
-
-@media screen and (max-width: 699.98px) {
   .head-nav.responsive {
     position: relative;
     flex-direction: column;
