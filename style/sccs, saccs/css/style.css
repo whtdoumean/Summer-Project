@@ -72,13 +72,13 @@ body {
   width: fit-content;
 }
 
-@media (min-width: 600px) and (max-width: 1249.98px) {
+@media (min-width: 699.98px) and (max-width: 1249.98px) {
   .head-nav {
     width: 90%;
   }
 }
 
-@media screen and (max-width: 599.98px) {
+@media screen and (max-width: 699.98px) {
   .head-nav a {
     display: none;
     height: 0px;
@@ -99,7 +99,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 699.98px) {
   .head-nav.responsive {
     position: relative;
     flex-direction: column;
@@ -509,7 +509,7 @@ footer .footer-content .footer-data p {
 
 @media screen and (max-width: 629.98px) {
   footer .footer-content .footer-title {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     width: 50%;
     text-decoration: none;
   }
@@ -522,7 +522,7 @@ footer .footer-content .footer-data p {
     display: none;
   }
   footer .footer-content .footer-data p {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     width: fit-content;
     white-space: nowrap;
     text-decoration: none;

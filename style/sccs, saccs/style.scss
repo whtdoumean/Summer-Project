@@ -5,6 +5,10 @@ $text-font: "wdth" 120, "wght" 400, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -2
 $medium-font: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
 $bold-font: "wdth" 151, "wght" 800, "GRAD" 0, "XTRA" 480, "YOPQ" 25, "YTDE" -305, "YTUC" 760;
 
+@media screen and (max-width: 599.98px) {
+    $header-height: 50px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,GRAD,XTRA,YOPQ,YTDE,YTUC@8..144,120,400,100,468,90,-203,712;8..144,120,500,100,468,90,-203,712;8..144,151,800,0,480,25,-305,760&display=swap');
 
 
@@ -102,13 +106,13 @@ body {
     }
 }
 
-@media (min-width: 600px) and (max-width: 1249.98px) {
+@media (min-width: 699.98px) and (max-width: 1249.98px) {
     .head-nav {
         width: 90%;
     }
 }
 
-@media screen and (max-width: 599.98px) {
+@media screen and (max-width: 699.98px) {
     .head-nav {
         a {
             display: none;
@@ -134,7 +138,7 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 699.98px) {
     .head-nav.responsive {
 
         position: relative;
@@ -554,7 +558,7 @@ footer {
     footer {
         .footer-content {
             .footer-title {
-                font-size: 1.25rem;
+                font-size: 1.35rem;
                 width: 50%;
                 text-decoration: none;
             }
@@ -568,7 +572,7 @@ footer {
                 }
 
                 p {
-                    font-size: 1.25rem;
+                    font-size: 1.35rem;
                     width: fit-content;
                     white-space: nowrap;
                     text-decoration: none;
