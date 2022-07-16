@@ -30,3 +30,22 @@ else if (scrollPosition() < lastScroll && containHide()){
 lastScroll  = scrollPosition();
 
 });
+
+$('a.scroll-to').on('click', function(event) {
+    var $anchor = $(this)
+    $('html, body')
+        .stop()
+        .animate(
+            {
+                scrollTop: $($anchor.attr('href')).offset().top - 80,
+            },
+            {
+                duration: 1800,
+                specialEasing: {
+                    width: 'linear',
+                    height: 'easeInOutCubic',
+                },
+            }
+        )
+    event.preventDefault()
+})  
