@@ -338,6 +338,7 @@ body.lock {
   position: relative;
   margin-top: 12px;
   font-variation-settings: "wdth" 151, "wght" 800, "GRAD" 0, "XTRA" 480, "YOPQ" 25, "YTDE" -305, "YTUC" 760;
+  color: #000;
 }
 
 .yachts .yacht-card .cost-cont {
@@ -618,7 +619,7 @@ footer .footer-content .footer-data p {
   -webkit-backdrop-filter: blur(32px);
           backdrop-filter: blur(32px);
   
-  box-shadow: inset 0 0 32px 3000px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 32px 3000px rgba(71, 111, 172, 0.525);
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
