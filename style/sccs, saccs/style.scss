@@ -11,13 +11,26 @@ $bold-font: "wdth" 151, "wght" 800, "GRAD" 0, "XTRA" 480, "YOPQ" 25, "YTDE" -305
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,GRAD,XTRA,YOPQ,YTDE,YTUC@8..144,120,400,100,468,90,-203,712;8..144,120,500,100,468,90,-203,712;8..144,151,800,0,480,25,-305,760&display=swap');
 
+html {
+    overflow: auto;
+}
+
+html.lock {
+    overflow: hidden;
+}
 
 body {
+    width: 100%;
     background-color: $ocean-blue;
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto Flex', sans-serif;
     font-variation-settings: $text-font;
+    color: #444444;
+}
+
+body.lock {
+    overflow: hidden;
 }
 
 @media screen and (max-width: 599.98px) {
@@ -186,7 +199,12 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    padding-bottom: 10vw;
+}
+
+.wrapper.lock {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 }
 
 .main-pic {
@@ -350,7 +368,7 @@ body {
                     font-variation-settings: $medium-font;
                 }
             }
-        }    
+        }
     }
 } 
 
@@ -505,6 +523,7 @@ footer {
     color: #fff;
 
     z-index: 1;
+    margin-top: 10vw;
 
     .footer-content {
         width: 1200px;
@@ -581,3 +600,113 @@ footer {
     }
 }
 
+
+// popups
+
+.popup {
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(32px);
+    box-shadow: inset 0 0 32px 3000px rgba(255, 255, 255, 0.2);
+
+    opacity: 0;
+    visibility: hidden;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    transition: all ease-in-out .5s;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 12px;
+}
+
+.popup-content {
+    background-color: #fff;
+    color: #000;
+    width: 452px;
+    height: fit-content;
+    border-radius: 32px;
+    box-sizing: border-box;
+
+    .popup-title {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        box-sizing: border-box;
+        padding: 24px;
+        
+
+        p {
+            font-variation-settings: $bold-font;
+            font-size: 1.75rem;
+        }
+
+        .close-popup-content {
+            position: absolute;
+            right: 24px;
+            .close-cont {
+                border-radius: 100px;
+                width: 32px;
+                height: 32px;
+                background-color: #cfcfcf;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        .photos {
+            width: 120%;
+            height: fit-content;
+
+            img {
+                width: 120%;
+            }
+        }
+
+    }
+
+    .popup-info {
+        box-sizing: border-box;
+        padding: 12px 24px 24px 24px;
+        .element {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            font-variation-settings: $medium-font;
+            color: #444444;
+            padding: 16px 0px;
+        }
+    
+        .element:not(:last-child) {
+            border-bottom: solid 2px #dfdfdf;
+        }
+        .element:last-child {
+            padding: 16px 0px 0px 0px;
+        }
+    }
+}

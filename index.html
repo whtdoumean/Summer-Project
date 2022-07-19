@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header lock-padding" id="header">
         <nav class="head-nav" id="myHeadnav">
             <div class="menu-close-cont">
                 <a href="javascript:void(0);" class="icon-close" onclick="myFunction()">
@@ -68,7 +68,7 @@
                             <p class="cost">10.000 руб/час</p>
                         </div>
                         <div class="inf-but-cont">
-                            <button class="inf-but"><p>Подробнее</p></button>
+                            <a class="popup-link" href="#popup-gold"><button class="inf-but"><p>Подробнее</p></button></a>
                         </div>
                     </div>
                     <div class="yacht-card">
@@ -79,7 +79,7 @@
                             <p class="cost">12.000 руб/час</p>
                         </div>
                         <div class="inf-but-cont">
-                            <button class="inf-but"><p>Подробнее</p></button>
+                            <a class="popup-link" href="#popup-evrika"><button class="inf-but"><p>Подробнее</p></button></a>
                         </div>
                     </div>
                 </div>
@@ -155,16 +155,63 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="footer-content">
+                <p class="footer-title">Аренда яхт в Сочи и Адлере от собственника</p>
+                <div class="footer-data">
+                    <p>+7 123 456 78 90</p>
+                    <p class="footer-dis">yachtest@gmail.com</p>
+                </div>
+            </div>
+        </footer>
     </div>
-    <footer>
-        <div class="footer-content">
-            <p class="footer-title">Аренда яхт в Сочи и Адлере от собственника</p>
-            <div class="footer-data">
-                <p>+7 123 456 78 90</p>
-                <p class="footer-dis">yachtest@gmail.com</p>
+    <div id="popup-gold" class="popup">
+        <div class="popup-body">
+            <div class="popup-content">
+                <div class="popup-title">
+                    <p>Яхта Голд</p>
+                    <a href="" class="close-popup-content close-popup"><div class="close-cont"><img src="pictures/close-popup2.svg"></div></a>
+                </div>
+                <div class="photos">
+                    <img src="pictures/gold-mini.jpg">
+                </div>
+                <div class="popup-info">
+                    <div class="element">
+                        <p>Год построки</p>
+                        <p>2008</p>
+                    </div>
+                    <div class="element">
+                        <p>Пассажиров</p>
+                        <p>9</p>
+                    </div>
+                    <div class="element">
+                        <p>Кают</p>
+                        <p>1</p>
+                    </div>
+                    <div class="element">
+                        <p>Длина</p>
+                        <p>10,5м</p>
+                    </div>
+                    <div class="element">
+                        <p>Ширина</p>
+                        <p>3,15м</p>
+                    </div>
+                    <div class="element">
+                        <p>Осадка</p>
+                        <p>1м</p>
+                    </div>
+                    <div class="element">
+                        <p>Двигатель</p>
+                        <p>2×280лс</p>
+                    </div>
+                    <div class="element">
+                        <p>Скорость</p>
+                        <p>30-40 узлов</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
 
     <script src="scripts/script.js"></script>
 </body>
