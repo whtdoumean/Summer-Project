@@ -43,9 +43,7 @@ body.lock {
     position: fixed;
 	top: 0; left: 0;
     width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: $header-height;
     background-color: #032270;
     color: white;
     z-index: 2;
@@ -120,6 +118,9 @@ body.lock {
 }
 
 @media (min-width: 699.98px) and (max-width: 1249.98px) {
+    .header {
+        height: $header-height;
+    }
     .head-nav {
         width: 90%;
     }
