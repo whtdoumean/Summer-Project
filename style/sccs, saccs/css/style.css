@@ -34,145 +34,180 @@ body.lock {
   left: 0;
   width: 100%;
   height: 80px;
+  z-index: 10;
   background-color: #032270;
-  color: white;
-  z-index: 2;
-  transition: transform .3s ease;
+  transition: transform ease .3s;
 }
 
 .header.hide {
   transform: translateY(-100%);
 }
 
-.head-nav {
+.header-container {
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  transition: .3s;
-  background-color: #032270;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 12px 0px;
 }
 
-.head-nav a {
-  height: 80px;
-  line-height: 80px;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #ffffff;
-  font-variation-settings: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
+.header-menu {
+  width: 100%;
   position: relative;
 }
 
-.head-nav a::before {
-  content: "";
-  bottom: 24%;
-  right: 0;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #fff;
-  transition: .2s;
+.menu-icon {
+  display: none;
 }
 
-.head-nav a:hover::before {
+.menu-body {
   width: 100%;
-  left: 0;
 }
 
-.head-nav a:hover {
+.menu-list li {
+  position: relative;
+}
+
+.menu-link {
   color: #fff;
+  font-size: 1.5rem;
+  font-variation-settings: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
+  text-decoration: none;
 }
 
-.head-nav a:active::before {
-  left: 100%;
-  width: 0%;
-}
-
-.head-nav .menu-close-cont {
-  display: none;
-  width: 100%;
-  height: 80px;
-  transition: .3s;
-}
-
-.head-nav .menu-close-cont img {
-  width: 44px;
-  margin: 0 auto;
-}
-
-.head-nav .menu-close-cont .icon-menu {
-  display: none;
-  height: 80px;
-  width: fit-content;
-}
-
-.head-nav .menu-close-cont .icon-close {
-  display: none;
-  height: 80px;
-  width: fit-content;
-}
-
-@media (min-width: 699.98px) and (max-width: 1249.98px) {
-  .header {
-    height: 80px;
-  }
-  .head-nav {
+@media (max-width: 1250px) {
+  .header-container {
     width: 90%;
   }
 }
 
-@media screen and (max-width: 699.98px) {
+@media (min-width: 1024px) {
+  .menu-list {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1024px) {
   .header {
-    height: 80px;
+    height: 64px;
   }
-  .head-nav a {
-    display: none;
-  }
-  .head-nav .menu-close-cont {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  .head-nav .menu-close-cont .icon-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 5%;
-  }
-  .head-nav.responsive {
-    position: relative;
-    flex-direction: column;
+  .header-menu::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: fit-content;
+    height: 64px;
     background-color: #032270;
+    z-index: 4;
+    box-shadow: none;
   }
-  .head-nav.responsive .menu-close-cont {
+  .menu-body {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 80px;
-    border-bottom: solid rgba(255, 255, 255, 0.5) 1px;
-    flex-direction: row;
-    justify-content: flex-start;
+    height: 100%;
+    background-color: #032270;
+    box-sizing: border-box;
+    padding: 84px 12px 120px 12px;
+    overflow: auto;
+    transition: all .5s ease 0s;
+    transform: translateY(-100%);
   }
-  .head-nav.responsive .menu-close-cont img {
+  .menu-body._active {
+    transform: translateY(0%);
+    border-radius: 0px 0px 0px 0px;
+  }
+  .menu-body._active .menu-list {
+    transform: translateY(0%);
+  }
+  .menu-icon._active span {
+    transform: scale(0%);
+  }
+  .menu-icon._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+  }
+  .menu-icon._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translateY(50%);
+  }
+  .menu-list {
+    z-index: 3;
+    transform: translateY(0%);
+    transition: all .5s ease 0s;
+    margin: auto;
+    margin-bottom: 56px;
+  }
+  .menu-list li {
+    flex-wrap: wrap;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 32px 0px;
+  }
+  .menu-list li a {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .extra-content {
+    font-size: 2.25rem;
+    font-variation-settings: "wdth" 120, "wght" 400, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 32px 0px;
+    position: relative;
     margin: auto;
   }
-  .head-nav.responsive .menu-close-cont .icon-menu {
-    display: none;
+  .extra-content::before {
+    content: "";
+    height: 2px;
+    width: 84%;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  .head-nav.responsive .menu-close-cont .icon-close {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 5%;
-  }
-  .head-nav.responsive a {
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
+  .menu-icon {
+    z-index: 10;
     display: block;
-    text-align: center;
+    position: relative;
+    width: 36px;
+    height: 24px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all .5s ease 0s;
+  }
+  .menu-icon span,
+  .menu-icon::before,
+  .menu-icon::after {
+    position: absolute;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    transition: all .3s ease 0s;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  .menu-icon::before {
+    content: "";
+    top: 0;
+  }
+  .menu-icon::after {
+    content: "";
+    bottom: 0;
+  }
+  .menu-icon span {
+    top: 50%;
+    transform: scale(1) translateY(-50%);
   }
 }
 
@@ -180,6 +215,12 @@ body.lock {
   width: 100%;
   height: 80px;
   background-color: #032270;
+}
+
+@media (max-width: 1024px) {
+  .fake-header {
+    height: 64px;
+  }
 }
 
 .wrapper {
@@ -250,20 +291,18 @@ body.lock {
 .slogan .slogan-in .main-but {
   width: 285px;
   height: 56px;
+  margin-top: 32px;
   position: relative;
   color: #fff;
   font-size: 1.75rem;
   border-radius: 40px;
   border: 0px;
-  margin-top: 32px;
+  padding: 0;
+  font-family: 'Roboto Flex', sans-serif;
+  font-variation-settings: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
   background: linear-gradient(to left, #F13C20, #ea5842, #F13C20);
   background-size: 200%;
   transition: .5s;
-}
-
-.slogan .slogan-in .main-but p {
-  font-family: 'Roboto Flex', sans-serif;
-  font-variation-settings: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
 }
 
 .slogan .slogan-in .main-but:hover {
@@ -273,7 +312,7 @@ body.lock {
 
 .slogan .slogan-in .main-but:active {
   background-position: left;
-  transform: scale(95%);
+  transform: scale(99%);
 }
 
 .block {
@@ -338,7 +377,6 @@ body.lock {
   position: relative;
   margin-top: 12px;
   font-variation-settings: "wdth" 151, "wght" 800, "GRAD" 0, "XTRA" 480, "YOPQ" 25, "YTDE" -305, "YTUC" 760;
-  color: #000;
 }
 
 .yachts .yacht-card .cost-cont {
@@ -378,9 +416,6 @@ body.lock {
   background: linear-gradient(to left, #F13C20, #ea5842, #F13C20);
   background-size: 200%;
   transition: .5s;
-}
-
-.yachts .yacht-card .inf-but-cont .inf-but p {
   font-family: 'Roboto Flex', sans-serif;
   font-variation-settings: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
 }
@@ -392,7 +427,7 @@ body.lock {
 
 .yachts .yacht-card .inf-but-cont .inf-but:active {
   background-position: left;
-  transform: scale(95%);
+  transform: scale(99%);
 }
 
 @media screen and (max-width: 767.98px) {
@@ -617,9 +652,8 @@ footer .footer-content .footer-data p {
   width: 100%;
   height: 100%;
   -webkit-backdrop-filter: blur(32px);
-          backdrop-filter: blur(32px);
-  
-  box-shadow: inset 0 0 32px 3000px rgba(71, 111, 172, 0.525);
+  backdrop-filter: blur(32px);
+  box-shadow: inset 0 0 32px 3000px rgba(56, 102, 155, 0.272);
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
@@ -633,9 +667,7 @@ footer .footer-content .footer-data p {
 }
 
 .popup.open .popup-content {
-  -webkit-transform: scale(100%) translateY(0px);
-        -ms-transform: scale(100%) translateY(0px);
-            transform: scale(100%) translateY(0px);
+  transform: scale(100%);
 }
 
 .popup-body {
@@ -653,11 +685,7 @@ footer .footer-content .footer-data p {
   height: fit-content;
   border-radius: 32px;
   box-sizing: border-box;
-
-  -webkit-transform: scale(98%) translateY(5px);
-        -ms-transform: scale(98%) translateY(5px);
-            transform: scale(98%) translateY(5px);
-
+  transform: scale(98%);
   transition: all ease-in-out .5s;
 }
 

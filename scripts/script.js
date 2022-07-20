@@ -1,11 +1,37 @@
-function myFunction() {
-    var x = document.getElementById("myHeadnav");
-    if (x.className == "head-nav") {
-        x.className += " responsive";
-    } else {
-        x.className = "head-nav";
+// burger menu
+
+const iconMenu = document.querySelector(".menu-icon");
+const menuBody = document.querySelector(".menu-body");
+if (iconMenu) {
+    iconMenu.addEventListener("click", toggleMenu);
+
+    function toggleMenu(e) {
+        if (!menuBody.classList.contains("_active")) {
+            openMenu();
+        } else if (menuBody.classList.contains("_active")) {
+            closeMenu();
+        }
     }
 }
+
+function openMenu() {
+    if (!menuBody.classList.contains("_active") && !iconMenu.classList.contains("_active")) {
+        menuBody.classList.add("_active");
+        iconMenu.classList.add("_active");
+        html.classList.add("lock");
+    }
+}
+
+function closeMenu() {
+    if (menuBody.classList.contains("_active") && iconMenu.classList.contains("_active")) {
+        menuBody.classList.remove("_active");
+        iconMenu.classList.remove("_active");
+        html.classList.remove("lock");
+    }
+}
+
+
+// header hide when scrolling
 
 let lastScroll = 0;
 const defoultOffset = 500;
@@ -31,27 +57,43 @@ lastScroll  = scrollPosition();
 
 });
 
-$('a.scroll-to').on('click', function(event) {
-    var $anchor = $(this)
-    $('html, body')
-        .stop()
-        .animate(
-            {
-                scrollTop: $($anchor.attr('href')).offset().top - 80,
-            },
-            {
-                duration: 1800,
-                specialEasing: {
-                    width: 'linear',
-                    height: 'easeInOutCubic',
-                },
-            }
-        )
-    event.preventDefault()
-})
+
+// scrolling on link click
+
+const scrollingLinks = document.querySelectorAll(".scroll-to[data-goto]");
+scrollingLinks.forEach(scrollingLink => {
+    console.log(scrollingLink);
+});
+
+if (scrollingLinks.length > 0) {
+    scrollingLinks.forEach(scrollingLink => {
+        scrollingLink.addEventListener("click", onScrollingLinklClick);
+    });
+
+    function onScrollingLinklClick(e) {
+        const scrollingLink = e.target;
+        if (scrollingLink.dataset.goto && document.querySelector(scrollingLink.dataset.goto)) {
+            const gotoBlock = document.querySelector(scrollingLink.dataset.goto);
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector(".header").offsetHeight;
+
+            closeMenu();
+
+            window.scrollTo({
+                top: gotoBlockValue,
+                behavior: "smooth"
+            });
+        }
+        e.preventDefault();
+    }
+}
 
 
-const popupLinks = document.querySelectorAll('.popup-link');
+//open popups
+
+const popupLinks = document.querySelectorAll('.popup-link[data-popupname]');
+popupLinks.forEach(popupLink => {
+    console.log(popupLink);
+});
 const body = document.querySelector('body');
 const wrapper = document.querySelector(".wrapper");
 const html = document.querySelector("html");
@@ -65,9 +107,10 @@ if (popupLinks.length > 0) {
     for (let index = 0; index < popupLinks.length; index++) {
         const popupLink = popupLinks[index];
         popupLink.addEventListener("click", function (e) {
-            const popupName = popupLink.getAttribute("href").replace("#", "");
-            const curentPopup = document.getElementById(popupName);
-            popupOpen(curentPopup);
+            const popupName = document.querySelector(popupLink.dataset.popupname);
+            //const curentPopup = document.getElementById(popupName);
+            //popupOpen(curentPopup);
+            popupOpen(popupName);
             e.preventDefault();
         });
     }

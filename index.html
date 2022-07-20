@@ -18,25 +18,22 @@
 
 <body>
     <header class="header lock-padding" id="header">
-        <nav class="head-nav" id="myHeadnav">
-            <div class="menu-close-cont">
-                <a href="javascript:void(0);" class="icon-close" onclick="myFunction()">
-                    <img src="pictures/close.png" alt="close">
-                </a>
-                <a href="javascript:void(0);" class="icon-menu" onclick="myFunction()">
-                    <img src="pictures/menu.png" alt="menu">
-                </a>
+        <div class="header-container">
+            <div class="header-menu" id="">
+                <div class="menu-icon">
+                    <span></span>
+                </div>
+                <div class="menu-body">
+                    <ul class="menu-list">
+                        <li><a data-goto=".yachts-block" class="menu-link scroll-to" href="">Посмотреть яхты</a></li>
+                        <li><a data-goto=".booking-block" class="menu-link scroll-to" href="">Забронировать яхту</a></li>
+                        <li><a data-goto=".comments-block" class="menu-link scroll-to" href="">Отзывы клиентов</a></li>
+                        <li><a data-goto=".contacts-block" class="menu-link scroll-to" href="">Наши контакты</a></li>
+                    </ul>
+                    <div class="extra-content">Аренда яхт в Сочи и Адлере от собственника</div>
+                </div>
             </div>
-            <a class="head-nav-link scroll-to" href="#yachts">
-                Посмотреть яхты
-            </a>
-            <a class="head-nav-link scroll-to" href="#comments">
-                Отзывы клиентов
-            </a>
-            <a class="head-nav-link scroll-to" href="#contacts">
-                Наши контакты
-            </a>
-        </nav>
+        </div>
     </header>
 
     <div class="fake-header"></div>
@@ -50,11 +47,11 @@
             <div class="slogan">
                 <div class="slogan-in">
                     <h2>Аренда яхт в Сочи и Адлере от собственника</h2>
-                    <a class="scroll-to" href="#yachts"><button class="main-but"><p>Посмотреть яхты</p></button></a>
+                    <button data-goto=".yachts-block" class="main-but scroll-to">Посмотреть яхты</button>
                 </div>
             </div>
 
-            <div class="block" id="yachts">
+            <div class="block yachts-block" id="yachts">
                 <div class="title">
                     <h1>НАШИ ЯХТЫ</h1>
                     <div class="separator"></div>
@@ -68,7 +65,7 @@
                             <p class="cost">10.000 руб/час</p>
                         </div>
                         <div class="inf-but-cont">
-                            <a class="popup-link" href="#popup-gold"><button class="inf-but"><p>Подробнее</p></button></a>
+                            <button data-popupname="#popup-gold" class="inf-but popup-link">Подробнее</button>
                         </div>
                     </div>
                     <div class="yacht-card">
@@ -79,12 +76,12 @@
                             <p class="cost">12.000 руб/час</p>
                         </div>
                         <div class="inf-but-cont">
-                            <a class="popup-link" href="#popup-evrika"><button class="inf-but"><p>Подробнее</p></button></a>
+                            <button data-popupname="#popup-evrika" class="inf-but popup-link">Подробнее</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="block" id="comments">
+            <div class="block comments-block" id="comments">
                 <div class="title">
                     <h1>ОТЗЫВЫ КЛИЕНТОВ</h1>
                     <div class="separator"></div>
@@ -119,7 +116,7 @@
                     </div>
                 </div>
             </div>
-            <div class="block" id="contacts">
+            <div class="block contacts-block" id="contacts">
                 <div class="title">
                     <h1>НАШИ КОНТАКТЫ</h1>
                     <div class="separator"></div>
