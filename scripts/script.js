@@ -40,20 +40,20 @@ const header = document.querySelector('.header');
 const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 const containHide = () => header.classList.contains('hide');
 
-window.addEventListener('scroll', ()=>{
+window.addEventListener('scroll', () => {
 
-if(scrollPosition() > lastScroll && !containHide() && scrollPosition() > defoultOffset) {
-    //scroll down
-    console.log('down');
-    header.classList.add('hide');
-}
-else if (scrollPosition() < lastScroll && containHide()){
-    //scroll up
-    console.log('up');
-    header.classList.remove('hide');
-}
+    if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defoultOffset) {
+        //scroll down
+        console.log('down');
+        header.classList.add('hide');
+    }
+    else if (scrollPosition() < lastScroll && containHide()) {
+        //scroll up
+        console.log('up');
+        header.classList.remove('hide');
+    }
 
-lastScroll  = scrollPosition();
+    lastScroll = scrollPosition();
 
 });
 
@@ -119,7 +119,7 @@ if (popupLinks.length > 0) {
 
 const popupCloseIcons = document.querySelectorAll(".close-popup");
 if (popupCloseIcons.length > 0) {
-    for (let index = 0; index < popupCloseIcons.length; index ++) {
+    for (let index = 0; index < popupCloseIcons.length; index++) {
         const popupCloseIcon = popupCloseIcons[index];
         popupCloseIcon.addEventListener("click", function (e) {
             popupClose(popupCloseIcon.closest(".popup"));
@@ -201,4 +201,24 @@ document.addEventListener("keydown", function (e) {
         const popupActive = document.querySelector(".popup.open");
         popupClose(popupActive);
     }
+});
+
+//для фоток
+let offset = 0;
+const sliderLine = document.querySelector('.slider-line');
+
+document.querySelector('.slider-next').addEventListener('click', function () {
+    offset = offset + 256;
+    if (offset > 768) {
+        offset = 0;
+    }
+    sliderLine.style.left = -offset + 'px';
+});
+
+document.querySelector('.slider-prev').addEventListener('click', function () {
+    offset = offset - 256;
+    if (offset < 0) {
+        offset = 768;
+    }
+    sliderLine.style.left = -offset + 'px';
 });
