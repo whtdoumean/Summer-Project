@@ -74,7 +74,8 @@ if (scrollingLinks.length > 0) {
         const scrollingLink = e.target;
         if (scrollingLink.dataset.goto && document.querySelector(scrollingLink.dataset.goto)) {
             const gotoBlock = document.querySelector(scrollingLink.dataset.goto);
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector(".header").offsetHeight;
+            //const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector(".header").offsetHeight;
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - (document.documentElement.clientWidth / 10);
 
             closeMenu();
 
