@@ -741,6 +741,7 @@ footer .footer-content .footer-data p {
 .popup-content .carouselEvrica {
   width: 452px;
   height: 380px;
+  overflow: hidden;
 }
 
 .popup-content .carouselEvrica .sliderLineEvrica {
@@ -773,6 +774,7 @@ footer .footer-content .footer-data p {
 .popup-content .carouselGold {
   width: 452px;
   height: 380px;
+  overflow: hidden;
 }
 
 .popup-content .carouselGold .sliderLineGold {
