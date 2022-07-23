@@ -420,12 +420,22 @@ body.lock {
             justify-content: center;
             padding: 17.5px 0px 17.5px 0px;
 
-            .ruble {
+            .icon-ruble {
+                border-radius: 100px;
                 width: 28px;
                 height: 28px;
                 position: relative;
-                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 6px;
+                background-color: #5a5a5a;
+                color: #fff;
+                text-align: center;
+                font-size: 1.25rem;
+                font-variation-settings: $text-font;
             }
+
             .cost {
                 font-size: 1.5rem;
                 position: relative;
@@ -466,7 +476,14 @@ body.lock {
             }
         }
     }
-} 
+}
+
+@media screen and (max-width: 599.98px) {
+    .yachts .yacht-card .cost-cont .icon-ruble {
+        width: 22px;
+        height: 22px;
+    }
+}
 
 @media screen and (max-width: 767.98px) {
     .yachts {

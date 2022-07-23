@@ -392,10 +392,20 @@ body.lock {
   padding: 17.5px 0px 17.5px 0px;
 }
 
-.yachts .yacht-card .cost-cont .ruble {
+.yachts .yacht-card .cost-cont .icon-ruble {
+  border-radius: 100px;
   width: 28px;
   height: 28px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  background-color: #5a5a5a;
+  color: #fff;
+  text-align: center;
+  font-size: 1.25rem;
+  font-variation-settings: "wdth" 120, "wght" 400, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
 }
 
 .yachts .yacht-card .cost-cont .cost {
@@ -433,6 +443,13 @@ body.lock {
 .yachts .yacht-card .inf-but-cont .inf-but:active {
   background-position: left;
   transform: scale(99%);
+}
+
+@media screen and (max-width: 599.98px) {
+  .yachts .yacht-card .cost-cont .icon-ruble {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -758,6 +775,16 @@ footer .footer-content .footer-data p {
 .popup-content .popup-title .carousel button:active {
   background: #000;
   color: #fff;
+}
+
+.popup-content .popup-title .carousel .slider-line {
+  width: 1024px;
+  height: 256px;
+  display: flex;
+  background: orange;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
 }
 
 .popup-content .popup-info {
