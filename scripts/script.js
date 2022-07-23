@@ -204,7 +204,7 @@ document.addEventListener("keydown", function (e) {
 });
 
 //для фоток
-let offsetEv = 0;
+let offsetEvrika = 0;
 let photoWidth = document.querySelector('.carousel').offsetWidth;
 const photoList = document.querySelectorAll('.carousel-photo');
 const sliderLineEvrika = document.querySelector('.sliderline-evrika');
@@ -216,8 +216,13 @@ for (let i = 0; i < photoList.length; i++) {
 
 document.querySelector('.slider-next-evrika').addEventListener('click', function () {
     offsetEvrika = offsetEvrika + photoWidth;
-    if (offsetEvrika > 452 * 9) {
+    if (offsetEvrika > photoWidth * 6) {
         offsetEvrika = 0;
+    };
+    const photoList = document.querySelectorAll('.carousel-photo');
+    for (let i = 0; i < photoList.length; i++) {
+        const photo = photoList[i];
+        photo.style.width = photoWidth + 'px';
     };
     sliderLineEvrika.style.left = -offsetEvrika + 'px';
 });
@@ -225,9 +230,14 @@ document.querySelector('.slider-next-evrika').addEventListener('click', function
 document.querySelector('.slider-prev-evrika').addEventListener('click', function () {
     offsetEvrika = offsetEvrika - photoWidth;
     if (offsetEvrika < 0) {
-        offsetEvrika = 452 * 9;
+        offsetEvrika = photoWidth * 6;
     };
-    sliderLine.style.left = -offsetEvrika + 'px';
+    const photoList = document.querySelectorAll('.carousel-photo');
+    for (let i = 0; i < photoList.length; i++) {
+        const photo = photoList[i];
+        photo.style.width = photoWidth + 'px';
+    };
+    sliderLineEvrika.style.left = -offsetEvrika + 'px';
 });
 
 let offsetGold = 0;
@@ -235,8 +245,13 @@ const sliderLineGold = document.querySelector('.sliderline-gold');
 
 document.querySelector('.slider-next-gold').addEventListener('click', function () {
     offsetGold = offsetGold + photoWidth;
-    if (offsetGold > 452 * 9) {
+    if (offsetGold > photoWidth * 7) {
         offsetGold = 0;
+    };
+    const photoList = document.querySelectorAll('.carousel-photo');
+    for (let i = 0; i < photoList.length; i++) {
+        const photo = photoList[i];
+        photo.style.width = photoWidth + 'px';
     };
     sliderLineGold.style.left = -offsetGold + 'px';
 });
@@ -244,7 +259,19 @@ document.querySelector('.slider-next-gold').addEventListener('click', function (
 document.querySelector('.slider-prev-gold').addEventListener('click', function () {
     offsetGold = offsetGold - photoWidth;
     if (offsetGold < 0) {
-        offsetGold = 452 * 9;
+        offsetGold = photoWidth * 7;
+    };
+    const photoList = document.querySelectorAll('.carousel-photo');
+    for (let i = 0; i < photoList.length; i++) {
+        const photo = photoList[i];
+        photo.style.width = photoWidth + 'px';
     };
     sliderLineGold.style.left = -offsetGold + 'px';
 });
+
+
+// phone mask
+$(function(){
+    //2. Получить элемент, к которому необходимо добавить маску
+    $("#phone").mask("999 999 99 99", {placeholder: " " });
+  });

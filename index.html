@@ -59,7 +59,7 @@
                 </div>
                 <div class="yachts">
                     <div class="yacht-card">
-                        <img src="pictures/photos/gold/gold-mini.jpg">
+                        <img src="pictures/photos/gold/0.jpg">
                         <p class="name">Яхта Голд</p>
                         <div class="cost-cont">
                             <div class="icon-ruble">₽</div>
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="yacht-card">
-                        <img src="pictures/photos/evrika/evrika-mini.jpg">
+                        <img src="pictures/photos/evrika/0.jpg">
                         <p class="name">Яхта Эврика</p>
                         <div class="cost-cont">
                             <div class="icon-ruble">₽</div>
@@ -91,10 +91,17 @@
                     <div class="booking-card">
                         <div class="data-input">
                             <div class="input input-name">
-                                <label class="label" for="name">Ваше имя</label><input type="text" name="name" placeholder="">
+                                <label class="label" for="name">Ваше имя</label>
+                                <input type="text" class="form-control" name="name" placeholder="">
                             </div>
                             <div class="input input-phone">
-                                <label class="label" for="phone-number">Ваш телефон</label><input type="numper" name="phone-numper" placeholder="XXX XXX XX-XX">
+                                <label class="label" for="phone-number">Ваш телефон</label>
+                                <div class="input-phone-form-container">
+                                    <div class="form-control number">
+                                        +7
+                                    </div>
+                                    <input type="tel" class="form-control phone" name="phone-numper" placeholder="" id="phone">
+                                </div>
                             </div>
                         </div>
                         <div class="booking-but-cont">
@@ -198,16 +205,14 @@
                 </div>
                 <div class="carousel">
                     <div class="sliderLine sliderline-gold">
-                        <img src="pictures/photos/evrika/evrika-mini.jpg" class="carousel-photo">
-                        <img src="pictures/photos/evrika/1.jpg" class="carousel-photo">
-                        <img src="pictures/photos/evrika/2.webp" class="carousel-photo">
-                        <img src="pictures/photos/evrika/3.webp" class="carousel-photo">
-                        <img src="pictures/photos/evrika/5.webp" class="carousel-photo">
-                        <img src="pictures/photos/evrika/6.webp" class="carousel-photo">
-                        <img src="pictures/photos/evrika/7.webp" class="carousel-photo">
-                        <img src="pictures/photos/evrika/8.webp" class="carousel-photo">
-                        <img src="pictures/photos/evrika/9.webp" class="carousel-photo">
-                        <img src="pictures/photos/evrika/10.webp" class="carousel-photo">
+                        <img src="pictures/photos/gold/0.jpg" class="carousel-photo">
+                        <img src="pictures/photos/gold/1.jpg" class="carousel-photo">
+                        <img src="pictures/photos/gold/2.jpg" class="carousel-photo">
+                        <img src="pictures/photos/gold/3.jpg" class="carousel-photo">
+                        <img src="pictures/photos/gold/4.webp" class="carousel-photo">
+                        <img src="pictures/photos/gold/6.jpg" class="carousel-photo">
+                        <img src="pictures/photos/gold/7.jpg" class="carousel-photo">
+                        <img src="pictures/photos/gold/8.jpg" class="carousel-photo">
                     </div>
                     <button class="slider-prev slider-prev-gold"><img src="pictures/ui/arrows/leftArrow.png" alt="prev"></button>
                     <button class="slider-next slider-next-gold"><img src="pictures/ui/arrows/rightArrow.png" alt="next"></button>
@@ -260,17 +265,14 @@
                 </div>
 
                 <div class="carousel">
-                    <div class="sliderLine .sliderline-evrika">
-                        <img src="pictures/photos/gold/gold-mini.jpg" class="carousel-photo">
-                        <img src="pictures/photos/gold/1.webp" class="carousel-photo">
-                        <img src="pictures/photos/gold/2.webp" class="carousel-photo">
-                        <img src="pictures/photos/gold/3.webp" class="carousel-photo">
-                        <img src="pictures/photos/gold/4.webp" class="carousel-photo">
-                        <img src="pictures/photos/gold/6.jpg" class="carousel-photo">
-                        <img src="pictures/photos/gold/7.jpg" class="carousel-photo">
-                        <img src="pictures/photos/gold/8.jpg" class="carousel-photo">
-                        <img src="pictures/photos/gold/9.jpg" class="carousel-photo">
-                        <img src="pictures/photos/gold/10.jpg" class="carousel-photo">
+                    <div class="sliderLine sliderline-evrika">
+                        <img src="pictures/photos/evrika/0.jpg" class="carousel-photo">
+                        <img src="pictures/photos/evrika/1.jpg" class="carousel-photo">
+                        <img src="pictures/photos/evrika/2.webp" class="carousel-photo">
+                        <img src="pictures/photos/evrika/3.webp" class="carousel-photo">
+                        <img src="pictures/photos/evrika/5.webp" class="carousel-photo">
+                        <img src="pictures/photos/evrika/6.webp" class="carousel-photo">
+                        <img src="pictures/photos/evrika/7.webp" class="carousel-photo">
                     </div>
                     <button class="slider-prev slider-prev-evrika"><img src="pictures/ui/arrows/leftArrow.png" alt="prev"></button>
                     <button class="slider-next slider-next-evrika"><img src="pictures/ui/arrows/rightArrow.png" alt="next"></button>
@@ -316,6 +318,7 @@
     </div>
 
     <script src="scripts/script.js"></script>
+    <script src="scripts/maskedinput.js"></script>
 </body>
 
 </html>
