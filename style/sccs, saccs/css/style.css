@@ -772,7 +772,6 @@ footer .footer-content .footer-data p {
 }
 
 .popup-content .carouselEvrica button {
-  background: #fff;
   height: 48px;
   width: 48px;
   border: 1px solid black;
@@ -812,7 +811,6 @@ footer .footer-content .footer-data p {
 }
 
 .popup-content .carouselGold button {
-  background: #fff;
   height: 48px;
   width: 48px;
   border: 1px solid black;
@@ -833,16 +831,6 @@ footer .footer-content .footer-data p {
 .popup-content .carouselGold button:active {
   background: #000;
   color: #fff;
-}
-
-.popup-content .popup-title .carousel .slider-line {
-  width: 1024px;
-  height: 256px;
-  display: flex;
-  background: orange;
-  position: relative;
-  left: 0;
-  transition: all ease 1s;
 }
 
 .popup-content .popup-info {
