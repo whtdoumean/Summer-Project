@@ -809,14 +809,21 @@ footer {
                 left: 0px;
                 transition: all ease 1s;
             }
-            
-            button {
-                background: none;
+
+            button{
+                background: #fff;
+                height: 48px;
+                width: 48px ;
                 border: 1px solid black;
-                border-radius: 4px;
-                padding: 10px 20px;
-                font-size: .9rem;
+                border-radius: 100px;
+                position: relative;
+                top:-180px;
             }
+            .slider-nexte {
+                position: relative;
+                right: -22rem;
+            }
+            
                 
             button:hover {
                 background: orangered;
@@ -841,14 +848,20 @@ footer {
                 left: 0px;
                 transition: all ease 1s;
             }
-            
-            button {
-                background: none;
+            button{
+                background: #fff;
+                height: 48px;
+                width: 48px ;
                 border: 1px solid black;
-                border-radius: 4px;
-                padding: 10px 20px;
-                font-size: .9rem;
+                border-radius: 100px;
+                position: relative;
+                top:-180px;
             }
+            .slider-nextg {
+                position: relative;
+                right: -22rem;
+            }
+            
                 
             button:hover {
                 background: orangered;
@@ -858,6 +871,7 @@ footer {
                 background: #000;
                 color: #fff;
             }
+            
     }   
         
 

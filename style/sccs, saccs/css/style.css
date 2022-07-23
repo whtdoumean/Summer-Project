@@ -755,11 +755,18 @@ footer .footer-content .footer-data p {
 }
 
 .popup-content .carouselEvrica button {
-  background: none;
+  background: #fff;
+  height: 48px;
+  width: 48px;
   border: 1px solid black;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: .9rem;
+  border-radius: 100px;
+  position: relative;
+  top: -180px;
+}
+
+.popup-content .carouselEvrica .slider-nexte {
+  position: relative;
+  right: -22rem;
 }
 
 .popup-content .carouselEvrica button:hover {
@@ -788,11 +795,18 @@ footer .footer-content .footer-data p {
 }
 
 .popup-content .carouselGold button {
-  background: none;
+  background: #fff;
+  height: 48px;
+  width: 48px;
   border: 1px solid black;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: .9rem;
+  border-radius: 100px;
+  position: relative;
+  top: -180px;
+}
+
+.popup-content .carouselGold .slider-nextg {
+  position: relative;
+  right: -22rem;
 }
 
 .popup-content .carouselGold button:hover {
