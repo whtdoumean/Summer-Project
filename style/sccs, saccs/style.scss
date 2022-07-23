@@ -591,6 +591,15 @@ body.lock {
     }
 }
 
+@media screen and (max-width: 767.98px) {
+    .booking {
+        .booking-card {
+            width: 100%;
+        }
+    }
+}
+
+
 .comments {
     width: 100%;
     height: max-content;

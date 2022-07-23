@@ -561,6 +561,12 @@ body.lock {
   font-variation-settings: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
 }
 
+@media screen and (max-width: 767.98px) {
+  .booking .booking-card {
+    width: 100%;
+  }
+}
+
 .comments {
   width: 100%;
   height: max-content;
