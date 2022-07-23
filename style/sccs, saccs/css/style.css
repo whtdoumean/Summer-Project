@@ -755,12 +755,23 @@ footer .footer-content .footer-data p {
   transform: rotate(-180deg) scale(95%);
 }
 
-.popup-content .popup-title .carousel {
-  width: 100%;
-  height: 339px;
+.popup-content .carouselEvrica {
+  width: 452px;
+  height: 380px;
+  overflow: hidden;
 }
 
-.popup-content .popup-title .carousel button {
+.popup-content .carouselEvrica .sliderLineEvrica {
+  width: 4520px;
+  height: 340px;
+  background: orange;
+  position: relative;
+  display: flex;
+  left: 0px;
+  transition: all ease 1s;
+}
+
+.popup-content .carouselEvrica button {
   background: none;
   border: 1px solid black;
   border-radius: 4px;
@@ -768,11 +779,44 @@ footer .footer-content .footer-data p {
   font-size: .9rem;
 }
 
-.popup-content .popup-title .carousel button:hover {
+.popup-content .carouselEvrica button:hover {
   background: orangered;
 }
 
-.popup-content .popup-title .carousel button:active {
+.popup-content .carouselEvrica button:active {
+  background: #000;
+  color: #fff;
+}
+
+.popup-content .carouselGold {
+  width: 452px;
+  height: 380px;
+  overflow: hidden;
+}
+
+.popup-content .carouselGold .sliderLineGold {
+  width: 4520px;
+  height: 340px;
+  background: orange;
+  position: relative;
+  display: flex;
+  left: 0px;
+  transition: all ease 1s;
+}
+
+.popup-content .carouselGold button {
+  background: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: .9rem;
+}
+
+.popup-content .carouselGold button:hover {
+  background: orangered;
+}
+
+.popup-content .carouselGold button:active {
   background: #000;
   color: #fff;
 }
