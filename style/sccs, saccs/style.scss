@@ -914,7 +914,7 @@ footer {
     }
     .carousel {
         width: 452px;
-        height: 380px;
+        height: fit-content;
         overflow: hidden;
         position: relative;
             .sliderLine {
@@ -928,34 +928,37 @@ footer {
             }
 
             button {
-                height: 48px;
-                width: 48px ;
+                background: none;
+                height: 100%;
+                width: 60px ;
                 border: none;
                 display: block;
                 position: absolute;
                 top: 50%;
+                transform: translateY(-50%);
                 z-index: 10;
                 img {
                     width: 100%;
-                    height: 100%;
+                    height: 48px;
                 }
             }
             .slider-prev {
                 left: 0;
+                padding: 0px 0px 0px 4px;
             }
             .slider-next{
                 right: 0;
+                padding: 0px 4px 0px 0px;
             }
             
                 
-            button:hover {
-                background: orangered;
-            }
+            // button:hover {
+            //     background: orangered;
+            // }
                 
-            button:active {
-                background: #000;
-                color: #fff;
-            }
+            // button:active {
+            //     background: #000;
+            // }
     }                
 
     .popup-info {

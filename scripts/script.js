@@ -205,51 +205,44 @@ document.addEventListener("keydown", function (e) {
 
 //для фоток
 let offsetEv = 0;
-let photoWidthEvrica = document.querySelector('.carouselEvrica').offsetWidth;
-const photoList = document.querySelectorAll('.carousel-photoe');
-const sliderLine = document.querySelector('.sliderLineEvrica');
+let photoWidth = document.querySelector('.carousel').offsetWidth;
+const photoList = document.querySelectorAll('.carousel-photo');
+const sliderLineEvrika = document.querySelector('.sliderline-evrika');
 
 for (let i = 0; i < photoList.length; i++) {
     const photo = photoList[i];
-    photo.style.width = photoWidthEvrica + 'px';
+    photo.style.width = photoWidth + 'px';
 };
 
-document.querySelector('.slider-nexte').addEventListener('click', function () {
-    offsetEv = offsetEv + photoWidthEvrica;
-    if (offsetEv > 452 * 9) {
-        offsetEv = 0;
+document.querySelector('.slider-next-evrika').addEventListener('click', function () {
+    offsetEvrika = offsetEvrika + photoWidth;
+    if (offsetEvrika > 452 * 9) {
+        offsetEvrika = 0;
     };
-    sliderLine.style.left = -offsetEv + 'px';
+    sliderLineEvrika.style.left = -offsetEvrika + 'px';
 });
 
-document.querySelector('.slider-preve').addEventListener('click', function () {
-    offsetEv = offsetEv - photoWidthEvrica;
-    if (offsetEv < 0) {
-        offsetEv = 452 * 9;
+document.querySelector('.slider-prev-evrika').addEventListener('click', function () {
+    offsetEvrika = offsetEvrika - photoWidth;
+    if (offsetEvrika < 0) {
+        offsetEvrika = 452 * 9;
     };
-    sliderLine.style.left = -offsetEv + 'px';
+    sliderLine.style.left = -offsetEvrika + 'px';
 });
 
 let offsetGold = 0;
-let photoWidthGold = document.querySelector('.carouselGold').offsetWidth;
-const photoListGold = document.querySelectorAll('.carousel-photog');
-const sliderLineGold = document.querySelector('.sliderLineGold');
+const sliderLineGold = document.querySelector('.sliderline-gold');
 
-for (let i = 0; i < photoListGold.length; i++) {
-    const photo = photoListGold[i];
-    photo.style.width = photoWidthGold + 'px';
-};
-
-document.querySelector('.slider-nextg').addEventListener('click', function () {
-    offsetGold = offsetGold + photoWidthGold;
+document.querySelector('.slider-next-gold').addEventListener('click', function () {
+    offsetGold = offsetGold + photoWidth;
     if (offsetGold > 452 * 9) {
         offsetGold = 0;
     };
     sliderLineGold.style.left = -offsetGold + 'px';
 });
 
-document.querySelector('.slider-prevg').addEventListener('click', function () {
-    offsetGold = offsetGold - photoWidthGold;
+document.querySelector('.slider-prev-gold').addEventListener('click', function () {
+    offsetGold = offsetGold - photoWidth;
     if (offsetGold < 0) {
         offsetGold = 452 * 9;
     };
