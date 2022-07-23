@@ -467,6 +467,100 @@ body.lock {
   }
 }
 
+.booking {
+  width: 100%;
+  height: fit-content;
+  margin-top: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking .booking-card {
+  background-color: #fff;
+  border-radius: 32px;
+  width: 45.5%;
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.booking .booking-card .data-input {
+  width: 90%;
+  margin: auto;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking .booking-card .data-input .input {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking .booking-card .data-input .input .label {
+  margin-bottom: 12px;
+  cursor: text;
+  font-size: 1.5rem;
+  font-variation-settings: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
+  text-align: center;
+  width: 100%;
+  color: #444444;
+}
+
+.booking .booking-card .data-input .input input {
+  display: block;
+  border: solid 1.5px #bebebe;
+  border-radius: 8px;
+  width: 100%;
+  font-variation-settings: "wdth" 120, "wght" 400, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  transition: all .2s ease-in-out;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.booking .booking-card .data-input .input input:focus {
+  border: solid 1.5px green;
+}
+
+.booking .booking-card .data-input .input input::placeholder {
+  color: #a2a2a2;
+}
+
+.booking .booking-card .data-input .input:first-child {
+  margin-bottom: 32px;
+}
+
+.booking .booking-card .booking-but-cont {
+  width: 100%;
+}
+
+.booking .booking-card .booking-but-cont p {
+  font-size: 1.5rem;
+  text-align: center;
+  font-variation-settings: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
+  margin-bottom: 12px;
+  color: #444444;
+}
+
+.booking .booking-card .booking-but-cont .booking-but {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 40px;
+  border: 0px;
+  background: linear-gradient(to left, #F13C20, #ea5842, #F13C20);
+  background-size: 200%;
+  transition: .5s;
+  font-family: 'Roboto Flex', sans-serif;
+  font-variation-settings: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
+}
+
 .comments {
   width: 100%;
   height: max-content;
@@ -819,16 +913,6 @@ footer .footer-content .footer-data p {
 .popup-content .carouselGold button:active {
   background: #000;
   color: #fff;
-}
-
-.popup-content .popup-title .carousel .slider-line {
-  width: 1024px;
-  height: 256px;
-  display: flex;
-  background: orange;
-  position: relative;
-  left: 0;
-  transition: all ease 1s;
 }
 
 .popup-content .popup-info {
