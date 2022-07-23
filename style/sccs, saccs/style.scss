@@ -501,6 +501,105 @@ body.lock {
     }
 }
 
+// data-input
+
+.booking {
+    width: 100%;
+    height: fit-content;
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .booking-card {
+        background-color: #fff;
+        border-radius: 32px;
+        width: 45.5%;
+        box-sizing: border-box;
+        padding: 12px;
+        .data-input {
+            width: 90%;
+            margin: auto;
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            .input {
+                margin-bottom: 32px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .label {
+                    margin-bottom: 12px;
+                    cursor: text;
+                    font-size: 1.5rem;
+                    font-variation-settings: $medium-font;
+                    text-align: center;
+                    width: 100%;
+                    color: #444444;
+                }
+                input {
+                    display: block;
+                    border: solid 1.5px #bebebe;
+                    border-radius: 8px;
+                    width: 100%;
+                    //height: calc(2rem + 8px);
+                    font-variation-settings: $text-font;
+                    box-sizing: border-box;
+                    padding: 8px 12px;
+                    transition: all .2s ease-in-out;
+                    font-size: 1.5rem;
+                    outline: none;
+                }
+                input:focus {
+                    border: solid 1.5px green;
+                }
+                input::placeholder {
+                    color: #a2a2a2;
+                }
+            }
+            .input:first-child {
+                margin-bottom: 32px;
+            }
+        }
+
+        .booking-but-cont {
+            width: 100%;
+            p {
+                font-size: 1.5rem;
+                text-align: center;
+                font-variation-settings: $medium-font;
+                margin-bottom: 12px;
+                color: #444444;
+            }
+            .booking-but {
+                position: relative;
+                //background-color: #F13C20;
+                width: 100%;
+                height: 56px;
+                color: #fff;
+                font-size: 1.5rem;
+                border-radius: 40px;
+                border: 0px;
+
+                background: linear-gradient(to left, #F13C20, #ea5842, #F13C20);
+                background-size: 200%;
+                transition: .5s;
+
+                font-family: 'Roboto Flex', sans-serif;
+                font-variation-settings: $medium-font;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .booking {
+        .booking-card {
+            width: 100%;
+        }
+    }
+}
+
+
 .comments {
     width: 100%;
     height: max-content;
