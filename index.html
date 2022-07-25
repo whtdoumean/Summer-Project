@@ -89,10 +89,10 @@
                 </div>
                 <div class="booking">
                     <div class="booking-card">
-                        <div class="data-input">
+                        <form class="form" action="#" id="form">
                             <div class="input input-name">
                                 <label class="label" for="name">Ваше имя</label>
-                                <input type="text" class="form-control" name="name" placeholder="">
+                                <input type="text" class="form-control" id="name" placeholder="" name="input-name">
                             </div>
                             <div class="input input-phone">
                                 <label class="label" for="phone-number">Ваш телефон</label>
@@ -100,10 +100,17 @@
                                     <div class="form-control number">
                                         +7
                                     </div>
-                                    <input type="tel" class="form-control phone" name="phone-numper" placeholder="" id="phone">
+                                    <input type="tel" class="form-control phone" id="phone-number" placeholder="" name="input-phone">
                                 </div>
                             </div>
-                        </div>
+                            <div class="input yacht">
+                                <label class="label" for="">Выберете яхту</label>
+                                <select name="input-yacht" class="form-control select">
+                                    <option value="Голд" selected>Голд</option>
+                                    <option value="Эврика">Эврика</option>
+                                </select>
+                            </div>
+                        </form>
                         <div class="booking-but-cont">
                             <p>Мы с вами свяжемся!</p>
                             <button data="" class="booking-but">Забронировать</button>

@@ -516,7 +516,7 @@ body.lock {
         width: 45.5%;
         box-sizing: border-box;
         padding: 12px;
-        .data-input {
+        .form {
             width: 90%;
             margin: auto;
             margin-top: 12px;
@@ -580,6 +580,15 @@ body.lock {
                 .number:hover {
                     border-right: solid 1.5px green;
                 }
+
+                .select {
+                    option {
+                        font-size: 1.5rem;
+                        width: 50%;
+                        border: 0;
+
+                    }
+                }
             }
         }
 
@@ -608,6 +617,16 @@ body.lock {
 
                 font-family: 'Roboto Flex', sans-serif;
                 font-variation-settings: $medium-font;
+            }
+            .booking-but:hover {
+                background-position: right;
+                transform: scale(101%);
+    
+            }
+            .booking-but:active {
+                background-position: left;
+                transform: scale(99%);
+    
             }
         }
     }
@@ -889,7 +908,7 @@ footer {
     box-sizing: border-box;
 
     transform: scale(98%);
-    transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) .5s;
+    transition: all ease .5s;
 
     .popup-title {
         width: 100%;

@@ -273,5 +273,5 @@ document.querySelector('.slider-prev-gold').addEventListener('click', function (
 // phone mask
 $(function(){
     //2. Получить элемент, к которому необходимо добавить маску
-    $("#phone").mask("999 999 99 99", {placeholder: " " });
+    $("#phone-number").mask("999 999 99 99", {placeholder: " " });
   });

@@ -484,7 +484,7 @@ body.lock {
   padding: 12px;
 }
 
-.booking .booking-card .data-input {
+.booking .booking-card .form {
   width: 90%;
   margin: auto;
   margin-top: 12px;
@@ -492,19 +492,19 @@ body.lock {
   flex-direction: column;
 }
 
-.booking .booking-card .data-input .input {
+.booking .booking-card .form .input {
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.booking .booking-card .data-input .input .input-phone-form-container {
+.booking .booking-card .form .input .input-phone-form-container {
   width: 100%;
   position: relative;
 }
 
-.booking .booking-card .data-input .input .label {
+.booking .booking-card .form .input .label {
   margin-bottom: 12px;
   cursor: text;
   font-size: 1.5rem;
@@ -514,7 +514,7 @@ body.lock {
   color: #444444;
 }
 
-.booking .booking-card .data-input .input .form-control {
+.booking .booking-card .form .input .form-control {
   display: block;
   border: solid 1.5px #bebebe;
   border-radius: 8px;
@@ -527,23 +527,23 @@ body.lock {
   outline: none;
 }
 
-.booking .booking-card .data-input .input .form-control.phone {
+.booking .booking-card .form .input .form-control.phone {
   padding: 8px 12px 8px 4rem;
 }
 
-.booking .booking-card .data-input .input .form-control:focus {
+.booking .booking-card .form .input .form-control:focus {
   border: solid 1.5px green;
 }
 
-.booking .booking-card .data-input .input .form-control::placeholder {
+.booking .booking-card .form .input .form-control::placeholder {
   color: #a2a2a2;
 }
 
-.booking .booking-card .data-input .input .form-control:first-child {
+.booking .booking-card .form .input .form-control:first-child {
   margin-bottom: 32px;
 }
 
-.booking .booking-card .data-input .input .number {
+.booking .booking-card .form .input .number {
   position: absolute;
   padding: 8px 12px 8px 12px;
   top: 50%;
@@ -556,8 +556,14 @@ body.lock {
   border-right: solid 1.5px #bebebe;
 }
 
-.booking .booking-card .data-input .input .number:hover {
+.booking .booking-card .form .input .number:hover {
   border-right: solid 1.5px green;
+}
+
+.booking .booking-card .form .input .select option {
+  font-size: 1.5rem;
+  width: 50%;
+  border: 0;
 }
 
 .booking .booking-card .booking-but-cont {
@@ -585,6 +591,16 @@ body.lock {
   transition: .5s;
   font-family: 'Roboto Flex', sans-serif;
   font-variation-settings: "wdth" 120, "wght" 500, "GRAD" 100, "XTRA" 468, "YOPQ" 90, "YTDE" -203, "YTUC" 712;
+}
+
+.booking .booking-card .booking-but-cont .booking-but:hover {
+  background-position: right;
+  transform: scale(101%);
+}
+
+.booking .booking-card .booking-but-cont .booking-but:active {
+  background-position: left;
+  transform: scale(99%);
 }
 
 @media screen and (max-width: 767.98px) {
@@ -799,7 +815,6 @@ footer .footer-content .footer-data p {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(32px);
   backdrop-filter: blur(32px);
   box-shadow: inset 0 0 32px 3000px rgba(56, 102, 155, 0.272);
   opacity: 0;
@@ -834,7 +849,7 @@ footer .footer-content .footer-data p {
   border-radius: 32px;
   box-sizing: border-box;
   transform: scale(98%);
-  transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;
+  transition: all ease .5s;
 }
 
 .popup-content .popup-title {
