@@ -523,7 +523,7 @@ body.lock {
             display: flex;
             flex-direction: column;
             .input {
-                margin-bottom: 32px;
+                margin-bottom: 28px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -563,7 +563,7 @@ body.lock {
                     color: #a2a2a2;
                 }
                 .form-control:first-child {
-                    margin-bottom: 32px;
+                    margin-bottom: 24px;
                 }
                 .number {
                     position: absolute;
@@ -586,8 +586,80 @@ body.lock {
                         font-size: 1.5rem;
                         width: 50%;
                         border: 0;
-
                     }
+                }
+            }
+            .yacht {
+                margin-bottom: 20px;
+            }
+            .input-agreement {
+                margin-bottom: 12px;
+                .custom-checkbox {
+                    display: none;
+                }
+                .custom-checkbox:checked + label::before {
+                    background-color: #0b76ef;
+                    border-color: #0b76ef;
+                }
+                .custom-checkbox:not(:disabled):active+label::before {
+                    background-color: #b3d7ff;
+                    border-color: #b3d7ff;
+                }
+                .custom-checkbox:focus+label::before {
+                    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                }
+                .custom-checkbox:focus:not(:checked)+label::before {
+                    border-color: #80bdff;
+                }
+                .custom-checkbox:hover+label::before {
+                    border-color: #0b76ef;
+                }
+                .custom-checkbox:checked + label::after {
+                    transform: scale(1);
+                }
+                .label {
+                    text-align: left;
+                    font-size: 1.1rem;
+                    display: inline-flex;
+                    line-height: 140%;
+                    align-items: center;
+                    position: relative;
+                    color: rgba(68, 68, 68, 0.7);
+                    a {
+                        color:rgba(11, 117, 239, 0.7);
+                        text-decoration: none;
+                    }
+                }
+                .label::before {
+                    content: "";
+                    align-self: flex-start;
+                    flex: 0 0 24px;
+                    height: 24px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    border: solid 1.5px #bebebe;
+                    margin: 0px 8px 0px 0px;
+                    cursor: default;
+                    transition: all ease-in-out .15s;
+
+                }
+                .label::after {
+                    content: "";
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-image: url("../../../pictures/ui/check-bold.svg");
+                    background-repeat: no-repeat;
+                    background-size: 72% 72%;
+                    background-position: 50% 50%;
+                    cursor: default;
+                    transform: scale(0);
+                    transition: all ease-in-out .15s;
+                }
+                .label::before:checked {
+                    background-color: #0b76ef;
                 }
             }
         }
