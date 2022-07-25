@@ -542,7 +542,7 @@ body.lock {
                 }
                 .form-control {
                     display: block;
-                    border: solid 1.5px #bebebe;
+                    border: solid 2px #bebebe;
                     border-radius: 8px;
                     width: 100%;
                     //height: calc(2rem + 8px);
@@ -557,7 +557,10 @@ body.lock {
                     padding: 8px 12px 8px 4rem;
                 }
                 .form-control:focus {
-                    border: solid 1.5px green;
+                    // border: solid 1.5px rgb(160, 234, 160);
+                    // box-shadow: 0 0 24px 2px rgb(160, 234, 160);
+                    border: solid 2px #80bdff;
+                    box-shadow: 0 0 0px 2px #80bdff;
                 }
                 .form-control::placeholder {
                     color: #a2a2a2;
@@ -575,10 +578,7 @@ body.lock {
                     border: none;
                     border-radius: 0px;
                     color: #444444;
-                    border-right: solid 1.5px #bebebe;
-                }
-                .number:hover {
-                    border-right: solid 1.5px green;
+                    border-right: solid 2px #bebebe;
                 }
 
                 .select {
@@ -637,7 +637,7 @@ body.lock {
                     height: 24px;
                     background-color: #fff;
                     border-radius: 8px;
-                    border: solid 1.5px #bebebe;
+                    border: solid 2px #bebebe;
                     margin: 0px 8px 0px 0px;
                     cursor: default;
                     transition: all ease-in-out .15s;
