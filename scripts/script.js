@@ -293,8 +293,7 @@ document.addEventListener("DOMContentLoaded", function () {
             form.parentElement.classList.add("_sending");
             let response = await fetch('http://127.0.0.1:5000/postemail', {
                 method: 'POST',
-                body: formData,
-                mode: "no-cors"
+                body: formData
             });
             if (response.ok) {
                 let result = await response.json();
