@@ -291,14 +291,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (error === 0) {
             form.parentElement.classList.add("_sending");
-            let response = await fetch('../post/sendmail.php', {
+            let response = await fetch('http://127.0.0.1:5000/postemail', {
                 method: 'POST',
-                body: formData
+                body: formData,
+                mode: "no-cors"
             });
             if (response.ok) {
                 let result = await response.json();
-                alert(result.message);
-                formPreview.innerHTML = '';
+                alert(result);
+                form.innerHTML = '';
                 form.reset();
                 form.parentElement.classList.remove("_sending");
             } else {
