@@ -293,7 +293,10 @@ document.addEventListener("DOMContentLoaded", function () {
             form.parentElement.classList.add("_sending");
             let response = await fetch('/postemail', {
                 method: 'POST',
-                body: formData
+                body: formData,
+                headers: {
+                    'Content-Type': 'application/json'
+                  }
             });
             if (response.ok) {
                 let result = await response.json();
