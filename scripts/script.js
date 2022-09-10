@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (error === 0) {
             form.parentElement.classList.add("_sending");
-            let response = await fetch('http://127.0.0.1:5000/postemail', {
+            let response = await fetch('/postemail', {
                 method: 'POST',
                 body: formData
             });
