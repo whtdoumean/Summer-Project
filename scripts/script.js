@@ -293,8 +293,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let formData = new FormData(form);
             let response = await fetch("../post/sendemail.py", {
                 method: 'post',
-                body: formData,
-                mode: "no-cors"
+                body: formData
             });
             if (response.ok) {
                 let result = await response.json();

@@ -1,5 +1,4 @@
-import smtplib
-import os
+from smtplib import SMTP
 from email.mime.text import MIMEText
 from flask import Flask, request    
 
@@ -9,7 +8,7 @@ def send_email(message):
     sender = "bryilyant16@gmail.com"
     password = "ddr4redz"
 
-    server = smtplib.SMTP("smtp.gmail.com", 507)
+    server = SMTP("smtp.gmail.com", 507)
     server.starttls()
 
     try:
@@ -22,7 +21,7 @@ def send_email(message):
     except Exception as _ex:
         return f"{_ex}\n error!"
 
-@app.route('', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 def form():
     if request.method == 'POST':
         name = request.form.get('name')
