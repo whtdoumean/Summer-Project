@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (error === 0) {
             form.parentElement.classList.add("_sending");
             let response = await fetch('../post/sendmail.php', {
-                method: 'POST',
+                method: 'GET',
                 body: formData
             });
             if (response.ok) {
