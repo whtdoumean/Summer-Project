@@ -271,10 +271,10 @@ document.querySelector('.slider-prev-gold').addEventListener('click', function (
 
 
 // phone mask
-$(function(){
+$(function () {
     //2. Получить элемент, к которому необходимо добавить маску
-    $("#phone-number").mask("999 999 99 99", {placeholder: " " });
-  });
+    $("#phone-number").mask("999 999 99 99", { placeholder: " " });
+});
 
 
 //form 
@@ -287,18 +287,18 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
 
         let error = formValidate(form);
+        let formData = new FormData(form);
 
         if (error === 0) {
             form.parentElement.classList.add("_sending");
-            let formData = new FormData(form);
-            let response = await fetch("../post/sendemail.py", {
-                method: 'post',
-                body: formData,
-                mode: "no-cors"
+            let response = await fetch('../post/sendmail.php', {
+                method: 'POST',
+                body: formData
             });
             if (response.ok) {
                 let result = await response.json();
                 alert(result.message);
+                formPreview.innerHTML = '';
                 form.reset();
                 form.parentElement.classList.remove("_sending");
             } else {
