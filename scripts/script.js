@@ -290,17 +290,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (error === 0) {
             form.parentElement.classList.add("_sending");
-            let = formData = new FormData(form);
-            let response = await fetch("sendmail.php", {
-                method: "POST",
-                body: formData
+            let formData = new FormData(form);
+            let response = await fetch("../post/sendemail.py", {
+                method: 'post',
+                body: formData,
+                mode: "no-cors"
             });
             if (response.ok) {
                 let result = await response.json();
                 alert(result.message);
                 form.reset();
+                form.parentElement.classList.remove("_sending");
             } else {
                 alert("Ошибка")
+                form.parentElement.classList.remove("_sending");
             }
         } else {
             alert("Заполните обязательные поля")
