@@ -1,6 +1,7 @@
 from smtplib import SMTP
 from email.mime.text import MIMEText
-from flask import Flask, request    
+from flask import Flask, request
+import json
 
 app = Flask(__name__)
 
@@ -22,12 +23,22 @@ def send_email(message):
         return f"{_ex}\n error!"
 
 @app.route('/', methods=['POST', 'GET'])
+def boom():
+    if request.method == 'GET':
+        return 'omg wtf boom'
+
+@app.route('/postemail', methods=['POST', 'GET'])
 def form():
     if request.method == 'POST':
         name = request.form.get('name')
         num = request.form.get('phone-number')
         sel = request.form.get('input-yacht')
-        print(name, num, sel)
+
+        response = {"message": [name, num, sel]}
+        json.dumps(response)
+        print(response)
+        
+        return response
     if request.method == 'GET':
         return 'omg wtf'
     
