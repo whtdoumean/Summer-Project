@@ -291,7 +291,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (error === 0) {
             form.parentElement.classList.add("_sending");
-            post(formData);
+            let response = await fetch('sendmail.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (response.ok) {
+                let result = await response.json();
+                alert(result.message);
+                form.reset();
+                form.parentElement.classList.remove("_sending");
+            } else {
+                alert("Ошибка")
+                form.parentElement.classList.remove("_sending");
+            }
         } else {
             alert("Заполните обязательные поля")
         }
@@ -341,7 +353,7 @@ function post(formData) {
 
     var xhr = new XMLHttpRequest();// Создаём объект xhr
 
-    xhr.open("POST", "http://127.0.0.1:5500/post/sendmail.php", true);// Открываем асинхронное соединение
+    xhr.open("POST", "sendmail.php", true);// Открываем асинхронное соединение
 
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");// Отправляем кодировку
 
