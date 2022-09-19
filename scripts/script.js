@@ -291,12 +291,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (error === 0) {
             form.parentElement.classList.add("_sending");
-            let response = await fetch('/postemail', {
+            let response = await fetch('sendmail.php', {
                 method: 'POST',
-                body: formData,
-                headers: {
-                    'Content-Type': 'application/json'
-                  }
+                body: formData
             });
             if (response.ok) {
                 let result = await response.json();
