@@ -1,47 +1,52 @@
 from smtplib import SMTP
 from email.mime.text import MIMEText
-from flask import Flask, request
+
+from flask import Flask, request, render_template
+import os
 import json
 
 app = Flask(__name__)
+staticFolder = os.path.join('static')
+app.config['UPLOAD_FOLDER'] = staticFolder
 
-def send_email(message):
+def send_email(name, num, sel):
     sender = "bryilyant16@gmail.com"
-    password = "ddr4redz"
-
-    server = SMTP("smtp.gmail.com", 507)
+    password = "diepokkcztoogswm"
+    server = SMTP("smtp.gmail.com", 587)
     server.starttls()
+
+    message = f"Имя: {name}\nТелефон: +7 {num}\n Его выбор: {sel}" 
 
     try:
         server.login(sender, password)
         msg = MIMEText(message)
-        msg["Subject"] = "Тестовая отправка письма"
-        server.sendmail(sender, sender, msg.as_string)
+        msg["Subject"] = "Новый клиент!"
+        server.sendmail(sender, sender, msg.as_string())
 
-        return "The message send successfully"
+        return "success"
     except Exception as _ex:
-        return f"{_ex}\n error!"
+        print(_ex)
+        return "error"
 
-@app.route('/', methods=['POST', 'GET'])
-def boom():
+@app.route('/', methods=['GET'])
+def main():
     if request.method == 'GET':
-        return 'omg wtf boom'
+        return render_template('index.html')
 
-@app.route('/postemail', methods=['POST', 'GET'])
+@app.route('/postemail', methods=['POST'])
 def form():
     if request.method == 'POST':
         name = request.form.get('name')
         num = request.form.get('phone-number')
         sel = request.form.get('input-yacht')
 
-        response = {"message": [name, num, sel]}
+        if send_email(name, num, sel) == "success":
+            response = {"message": "Успешно!"}
+        else:
+            response = {"message": "Данные не отправлены"}
+
         json.dumps(response)
-        print(response)
-        
         return response
-    if request.method == 'GET':
-        return 'omg wtf'
-    
 
 if __name__ == "__main__":
     app.run(debug=True)
