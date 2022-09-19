@@ -291,20 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (error === 0) {
             form.parentElement.classList.add("_sending");
-            let response = await fetch('sendmail.php', {
-                method: 'POST',
-                body: formData
-            });
-            if (response.ok) {
-                let result = await response.json();
-                alert(result);
-                form.innerHTML = '';
-                form.reset();
-                form.parentElement.classList.remove("_sending");
-            } else {
-                alert("Ошибка")
-                form.parentElement.classList.remove("_sending");
-            }
+            post(formData);
         } else {
             alert("Заполните обязательные поля")
         }
@@ -348,3 +335,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+function post(formData) {
+
+    var data = "formData=" + encodeURIComponent(formData);
+
+    var xhr = new XMLHttpRequest();// Создаём объект xhr
+
+    xhr.open("POST", "http://127.0.0.1:5500/post/sendmail.php", true);// Открываем асинхронное соединение
+
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");// Отправляем кодировку
+
+    xhr.send(data); // Отправляем POST-запрос
+
+    xhr.onreadystatechange = function () // Ждём ответа от сервера
+    {
+        if (xhr.readyState == 4) // возвращает текущее состояние объекта(0-4)
+        {
+            if (xhr.status == 200) // всё хорошо
+            {
+                alert(xhr.responseText); // Выводим ответ сервера
+            }
+            else {
+                alert(xhr.status + ': ' + xhr.statusText); // пример вывода: 404: Not Found
+            }
+        }
+    }
+
+}
