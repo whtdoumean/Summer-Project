@@ -1,2 +1,2 @@
-# Summer-Project
-This is too difficult
+# Yacht-old-in-process
+Старая версия лендинга, использующая хостинг Git'a
